@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.houseCare.HouseCareMainPage"
+             Title="House Care Main Page">
+
+    <StackLayout Padding="15">
+        <ImageButton  x:Name="prof" WidthRequest="220"
+        HeightRequest="220"
+        HorizontalOptions="Center"
+        VerticalOptions="Center" />
+
+        <ImageButton  x:Name="regmai" WidthRequest="220"
+        HeightRequest="220"
+        HorizontalOptions="Center"
+        VerticalOptions="Center" />
+        
+        <Button Text="professional" Clicked="Button_Clicked"/>
+        <Button Text="regular maintence" Clicked="Button_Clicked_1"/>
+        
+    </StackLayout>
+    
+</ContentPage>

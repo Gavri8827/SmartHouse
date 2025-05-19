@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.familyClass.childrenTaskInfo"
+             Title="{Binding Name}">
+
+    <StackLayout Margin="20">
+        <Image Source="{Binding Image}"/>
+        <Label Text="{Binding Name}" FontSize="Large" TextColor="Silver"/>
+       
+        <ListView ItemsSource="{Binding Tasks}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItem Text="delete"
+                                               BackgroundColor="Red"
+                                               IconImageSource="delete.png"
+                                               Invoked="SwipeItem_Invoked"/>
+                                    <SwipeItem Text="Edit"
+                                               BackgroundColor="Green"
+                                               IconImageSource="add.png"
+                                               Invoked="SwipeItem_Invoked_1"/>
+
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Description}"/>
+                                <CheckBox IsChecked="{Binding IsDone}" HorizontalOptions="EndAndExpand" />
+                            </StackLayout>
+                        </SwipeView>
+                        
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+
+
+    </StackLayout>
+
+</ContentPage>

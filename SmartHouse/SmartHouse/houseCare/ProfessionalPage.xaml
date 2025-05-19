@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.houseCare.ProfessionalPage">
+    <ListView x:Name="professionalList" SeparatorColor="Gray" >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10" VerticalOptions="Fill">
+                        <!-- מקרה הפרטים: מתפרס בצד שמאל ומשתמש ב-FillAndExpand כדי לתפוס מקום נדרש -->
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Label Text="{Binding name}"
+                                     FontSize="Medium"
+                   TextColor="Goldenrod"
+                   FontAttributes="Bold"/>
+                                    <Label Text="{Binding Description}"
+                   FontSize="Small"
+                   TextColor="Goldenrod"
+                   FontAttributes="Bold"/>
+                                    <Label Text="{Binding phoneNumber}"
+                   FontSize="Medium"
+                   TextColor="Goldenrod"
+                   FontAttributes="Bold"/>
+                                </StackLayout>
+
+                                <!-- מקרה כפתורי הפעולה: מתפרס בצד ימין ומסודר באופן אופקי -->
+                              
+                    </StackLayout>
+
+
+
+
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
+</ContentPage>

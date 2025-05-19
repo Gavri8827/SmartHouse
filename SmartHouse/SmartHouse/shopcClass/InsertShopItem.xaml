@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.shopcClass.InsertShopItem">
+    <StackLayout>
+        <Label Text="Add Item to the list:" FontSize="Medium" TextColor="Green"/>
+        <Entry x:Name="ItemShopList" Keyboard="Text" Placeholder="ItemShop"
+       ReturnType="Next"/>
+        <Label Text="How much do you beed?"/>
+        <Entry x:Name="QuantityItem" Keyboard="Numeric" Placeholder="QuantityItemList"
+       ReturnType="Next"/>
+
+    </StackLayout>
+</ContentPage>

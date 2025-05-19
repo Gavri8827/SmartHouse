@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.UtilitiesClass.UtilitiesMainPage"
+             Title="ניהול חשבונות">
+    
+        <StackLayout>
+            <Label Text="Welcome! to you personal utilities manager" 
+                  
+                   HorizontalOptions="Center" FontSize="Large" />
+
+        <Label Text=" in this page you csan modifier your house accont esily"
+               HorizontalOptions="Center" FontSize="Medium"/>
+    </StackLayout>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="insert"
+                  Clicked="ToolbarItem_Clicked"
+                  IconImageSource="insert.png"
+                  Priority="2"
+                  Order="Primary"/>
+
+
+
+
+    </ContentPage.ToolbarItems>
+
+</ContentPage>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.houseCare.Maintence"
+             Title="Maintence of the house care">
+    <Grid x:Name="TasksGrid" Padding="10" RowSpacing="10" ColumnSpacing="10">
+       
+        
+    </Grid>
+</ContentPage>

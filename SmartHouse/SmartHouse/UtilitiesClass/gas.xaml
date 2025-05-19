@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.UtilitiesClass.gas">
+    <StackLayout>
+        <Label Text="Gas account number:" FontSize="Medium"/>
+        <Label x:Name="GasNumber" FontSize="Large" TextColor="Black"/>
+
+        <Label Text="Gas company:" FontSize="Medium"/>
+        <Label x:Name="GasCompany" FontSize="Large" TextColor="Black"/>
+
+        <Label Text="Gas company phone number:" FontSize="Medium"/>
+        <Label x:Name="GasPhoneNumber" FontSize="Large" TextColor="Black"/>
+
+
+        <Label Text="Last payment" FontSize="Medium"/>
+        <Entry Placeholder="0.00" Keyboard="Numeric"/>
+
+
+    </StackLayout>
+</ContentPage>

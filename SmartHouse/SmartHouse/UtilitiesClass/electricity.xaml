@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.UtilitiesClass.electricity"
+             Title="Electrical Data">
+
+    <StackLayout>
+        <Label Text="Electricity account number:" FontSize="Medium"/>
+       
+        <Label x:Name="electricityNumber" FontSize="Large" TextColor="Black"/>
+
+        <Label Text="Electricity phone number:" FontSize="Medium"/>
+        <Label x:Name="electricityphoneNumber" FontSize="Large" TextColor="Black"/>
+
+        <Label Text="Last payment" FontSize="Medium"/>
+        <Entry Placeholder="0.00" Keyboard="Numeric" x:Name="electrictyPaymenr"/>
+
+
+        <Button Text="Save" Clicked="Button_Clicked"/>
+
+
+
+
+
+
+
+
+    </StackLayout>
+
+   
+    
+</ContentPage>

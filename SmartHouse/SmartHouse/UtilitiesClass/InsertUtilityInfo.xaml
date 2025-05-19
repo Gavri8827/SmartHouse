@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.UtilitiesClass.InsertUtilityInfo"
+             Title="Insert utility information">
+    <StackLayout>
+        <Label Text="insert eletricity information:" FontSize="Medium" TextColor="Green"/>
+        <Entry x:Name="elctricityNumberOcount" Keyboard="Text" Placeholder="elctricityNumberOcount"
+               ReturnType="Next"/>
+            <Entry x:Name="elctricityNumberPhone" Keyboard="Numeric" Placeholder="elctricityNumberPhone"
+               ReturnType="Next"/>
+
+        <Label Text="insert water information:" FontSize="Medium" TextColor="Green"/>
+        <Entry x:Name="WaterNumberOcount" Keyboard="Numeric" Placeholder="WaterNumberOcount"
+  ReturnType="Next"/>
+        <Entry x:Name="WaterNumberPhone" Keyboard="Numeric" Placeholder="elctricityNumberPhone"
+ReturnType="Next"/>
+
+        <Label Text="insert gas information:" FontSize="Medium" TextColor="Green"/>
+
+        <Entry x:Name="GasNumberOcount" Keyboard="Text" Placeholder="GasNumberOcount"
+        ReturnType="Next"/>
+        <Picker Title="Gas company" TitleColor="Gray" x:Name="GasCompany">
+            <Picker.Items>
+                <x:String> Pazgas </x:String>
+                <x:String>Amisragas</x:String>
+                <x:String>Sonol Gas</x:String>
+                <x:String>Electra power</x:String>
+
+            </Picker.Items>
+            
+        </Picker>
+        
+        <Entry x:Name="GasNumberPhone" Keyboard="Numeric" Placeholder="GasNumberPhone"
+ReturnType="Next"/>
+        <Button Text="save information" Clicked="Button_Clicked"/>
+
+
+
+    </StackLayout>
+</ContentPage>

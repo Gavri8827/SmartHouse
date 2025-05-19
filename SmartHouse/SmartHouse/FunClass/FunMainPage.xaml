@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.FunClass.FunMainPage">
+    <StackLayout Padding="20" Spacing="30" VerticalOptions="Center">
+
+        <Label Text="Here you can get some ideas anf save your voutcer"
+               FontSize="Large"
+               HorizontalOptions="Center" />
+
+        <Button x:Name="Copons"
+                Text="Manage Your Coppon's"
+                Clicked="Copons_Clicked"
+                BackgroundColor="#B76E79"
+                TextColor="White"
+                CornerRadius="15"
+                Padding="15"
+                FontSize="Medium" />
+
+        <Button x:Name="vacations"
+               Text="Plan your next vaction"
+               Clicked="vacations_Clicked"
+               BackgroundColor="#B76E79"
+               TextColor="White"
+               CornerRadius="15"
+               Padding="15"
+               FontSize="Medium" />
+      
+        <Button x:Name="familyTime"
+              Text="Family Time"
+              Clicked="familyTime_Clicked"
+               BackgroundColor="#B76E79"
+               TextColor="White"
+               CornerRadius="15"
+               Padding="15"
+               FontSize="Medium" />
+        
+        <Button x:Name="BucketList"
+              Text="Fun Bucket List"
+              Clicked="BucketList_Clicked"
+               BackgroundColor="#B76E79"
+               TextColor="White"
+               CornerRadius="15"
+               Padding="15"
+               FontSize="Medium" />
+        
+        
+
+
+
+
+
+        <Label x:Name="ideaLabel"
+               Text=""
+               FontSize="Medium"
+               TextColor="Black"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               VerticalOptions="CenterAndExpand"/>
+    </StackLayout>
+</ContentPage>

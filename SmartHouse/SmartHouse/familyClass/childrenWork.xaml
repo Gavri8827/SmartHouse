@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.familyClass.childrenWork">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"
+                     IconImageSource="add.png"
+                     Priority="0"
+                     Order="Primary"
+                     Clicked="ToolbarItem_Clicked"/>
+
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="childrenList" SeparatorColor="Gray" ItemSelected="childrenList_ItemSelected"
+              ItemTapped="childrenList_ItemTapped">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="{Binding Image}"
+                               HeightRequest="40"
+                               WidthRequest="40"/>
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <Label Text="{Binding Name}"
+                             FontSize="Medium"
+                             TextColor="Goldenrod"
+                              FontAttributes="Bold"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" >
+                                <ImageButton Source="add.png" BackgroundColor ="Green" HeightRequest="50" WidthRequest="50" Clicked="ImageWrite_Clicked" CommandParameter="{Binding}" />
+                            
+
+                        </StackLayout>
+
+
+                        
+
+                    </StackLayout>
+                 
+                   
+
+                </ViewCell> 
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        
+    </ListView>
+</ContentPage>

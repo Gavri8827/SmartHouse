@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:CI="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="SmartHouse.MainPage"
+             
+             Title="SmartHouse- בית חכם ">
+
+    <Grid Padding="0"
+          HorizontalOptions="FillAndExpand"
+          VerticalOptions="FillAndExpand"
+          RowSpacing="20"
+          ColumnSpacing="20">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <!-- רווח עליון -->
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <!-- רווח תחתון -->
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- תמונת רקע -->
+        <Image Source="backgroundgray.jpg"
+               Aspect="AspectFill"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               x:Name="background1"
+               Grid.RowSpan="5"
+               Grid.ColumnSpan="2" />
+
+        <!-- שורה ראשונה של כפתורים -->
+        <Button Text="חשבונות"
+                ImageSource="acount.png"
+                BackgroundColor="#2E2E2E"
+                Clicked="Utilities_Clicked"
+                WidthRequest="100"
+                HeightRequest="100"
+                CornerRadius="50"
+                ContentLayout="Top, 0"
+                TextColor="White"
+                Grid.Row="1"
+                Grid.Column="0"
+                HorizontalOptions="Center"/>
+        
+
+        <Button Text="התקלקל לי"
+                ImageSource="house.png"
+                BackgroundColor="#2E2E2E"
+                Clicked="houseCare_Clicked"
+                WidthRequest="100"
+                HeightRequest="100"
+                CornerRadius="50"
+                ContentLayout="Top, 0"
+                TextColor="White"
+                Grid.Row="1"
+                Grid.Column="1"
+                HorizontalOptions="Center"/>
+
+        <!-- שורה שנייה -->
+        <Button Text="fun"
+                ImageSource="fun.png"
+                BackgroundColor="#2E2E2E"
+                Clicked="Fun_Clicked"
+                WidthRequest="100"
+                HeightRequest="100"
+                CornerRadius="50"
+                ContentLayout="Top, 0"
+                TextColor="White"
+                Grid.Row="2"
+                Grid.Column="0"
+                HorizontalOptions="Center"/>
+
+        <Button Text="רשימת קניות"
+                ImageSource="basket.png"
+                BackgroundColor="#2E2E2E"
+                Clicked="Shop_Clicked"
+                WidthRequest="100"
+                HeightRequest="100"
+                CornerRadius="50"
+                ContentLayout="Top, 0"
+                TextColor="White"
+                Grid.Row="2"
+                Grid.Column="1"
+                HorizontalOptions="Center"/>
+
+        <!-- כפתור תחתון במרכז -->
+        <Button Text="family"
+                ImageSource="family.png"
+                BackgroundColor="#2E2E2E"
+                Clicked="Family_Clicked_4"
+                WidthRequest="100"
+                HeightRequest="100"
+                CornerRadius="50"
+                ContentLayout="Top, 0"
+                TextColor="White"
+                Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="Center" />
+    </Grid>
+</ContentPage>
