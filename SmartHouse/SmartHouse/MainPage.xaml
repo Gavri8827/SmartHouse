@@ -3,10 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:CI="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              x:Class="SmartHouse.MainPage"
-             
-             Title="SmartHouse- בית חכם ">
+             Title=""
+             BackgroundColor="White">
 
-    <Grid Padding="0"
+
+    <!-- 1. Resources רק לדף הזה -->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <!-- כותרת ראשית -->
+            <Style x:Key="HeroTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="45"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="#FF6A00"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="Margin" Value="0,20,0,10"/>
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid Padding="0"
           HorizontalOptions="FillAndExpand"
           VerticalOptions="FillAndExpand"
           RowSpacing="20"
@@ -14,6 +33,8 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
+            <!-- 2: שורת תמונה -->
+            <RowDefinition Height="Auto"/>
             <!-- רווח עליון -->
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -27,39 +48,56 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <!-- תמונת רקע -->
+        <!-- תמונת רקע --><!--
         <Image Source="backgroundgray.jpg"
                Aspect="AspectFill"
                HorizontalOptions="FillAndExpand"
                VerticalOptions="FillAndExpand"
                x:Name="background1"
                Grid.RowSpan="5"
-               Grid.ColumnSpan="2" />
+               Grid.ColumnSpan="2" />-->
+
+        <!-- 3. כותרת גדולה בראש המסך -->
+        <Label Text="SmartHouse"
+           Style="{StaticResource HeroTitleStyle}"
+           Grid.Row="0"
+           Grid.ColumnSpan="2"/>
+
+        <!-- התמונה שתופסת שורה שלמה מעל הכפתורים -->
+        <Image Source="icon"
+             Aspect="AspectFit"
+             HeightRequest="100"
+             WidthRequest="100"
+             HorizontalOptions="Center"
+             VerticalOptions="Start"
+             Grid.Row="1"
+             Grid.ColumnSpan="2"
+             Margin="0,-100"/>
 
         <!-- שורה ראשונה של כפתורים -->
         <Button Text="חשבונות"
-                ImageSource="acount.png"
-                BackgroundColor="#2E2E2E"
+                ImageSource="heshbonot.jpg"
+                BackgroundColor="Wheat"
                 Clicked="Utilities_Clicked"
                 WidthRequest="100"
                 HeightRequest="100"
                 CornerRadius="50"
                 ContentLayout="Top, 0"
-                TextColor="White"
+                TextColor="Black"
                 Grid.Row="1"
                 Grid.Column="0"
                 HorizontalOptions="Center"/>
         
 
         <Button Text="התקלקל לי"
-                ImageSource="house.png"
-                BackgroundColor="#2E2E2E"
+                ImageSource="broke"
+                BackgroundColor="Wheat"
                 Clicked="houseCare_Clicked"
                 WidthRequest="100"
                 HeightRequest="100"
                 CornerRadius="50"
                 ContentLayout="Top, 0"
-                TextColor="White"
+                TextColor="Black"
                 Grid.Row="1"
                 Grid.Column="1"
                 HorizontalOptions="Center"/>
@@ -67,26 +105,26 @@
         <!-- שורה שנייה -->
         <Button Text="fun"
                 ImageSource="fun.png"
-                BackgroundColor="#2E2E2E"
+                BackgroundColor="Wheat"
                 Clicked="Fun_Clicked"
                 WidthRequest="100"
                 HeightRequest="100"
                 CornerRadius="50"
                 ContentLayout="Top, 0"
-                TextColor="White"
+                TextColor="Black"
                 Grid.Row="2"
                 Grid.Column="0"
                 HorizontalOptions="Center"/>
 
         <Button Text="רשימת קניות"
-                ImageSource="basket.png"
-                BackgroundColor="#2E2E2E"
+                ImageSource="shopping.png"
+                BackgroundColor="Wheat"
                 Clicked="Shop_Clicked"
                 WidthRequest="100"
                 HeightRequest="100"
                 CornerRadius="50"
                 ContentLayout="Top, 0"
-                TextColor="White"
+                TextColor="Black"
                 Grid.Row="2"
                 Grid.Column="1"
                 HorizontalOptions="Center"/>
@@ -94,16 +132,17 @@
         <!-- כפתור תחתון במרכז -->
         <Button Text="family"
                 ImageSource="family.png"
-                BackgroundColor="#2E2E2E"
+                BackgroundColor="Wheat"
                 Clicked="Family_Clicked_4"
                 WidthRequest="100"
                 HeightRequest="100"
                 CornerRadius="50"
                 ContentLayout="Top, 0"
-                TextColor="White"
+                TextColor="Black"
                 Grid.Row="3"
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
                 HorizontalOptions="Center" />
     </Grid>
+    </ContentPage.Content>
 </ContentPage>

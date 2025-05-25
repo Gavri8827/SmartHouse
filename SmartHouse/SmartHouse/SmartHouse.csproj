@@ -40,6 +40,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="AppShell.xaml.cs">
+      <DependentUpon>AppShell.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="UtilitiesClass\electricity.xaml.cs">
+      <DependentUpon>electricity.xaml</DependentUpon>
+    </Compile>
     <Compile Update="UtilitiesClass\UtilitiesMainPage.xaml.cs">
       <DependentUpon>UtilitiesMainPage.xaml</DependentUpon>
     </Compile>
@@ -59,6 +68,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="familyClass\PetInfoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="About.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="UtilitiesClass\financial.xaml">
@@ -91,7 +103,7 @@
     <EmbeddedResource Update="UtilitiesClass\InsertUtilityInfo.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Page1.xaml">
+    <EmbeddedResource Update="AppShell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="shopcClass\InsertShopItem.xaml">

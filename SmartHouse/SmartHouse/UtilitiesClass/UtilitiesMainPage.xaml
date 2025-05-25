@@ -1,28 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SmartHouse.UtilitiesClass.UtilitiesMainPage"
-             Title="ניהול חשבונות">
-    
-        <StackLayout>
-            <Label Text="Welcome! to you personal utilities manager" 
-                  
-                   HorizontalOptions="Center" FontSize="Large" />
+<TabbedPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SmartHouse.UtilitiesClass.UtilitiesMainPage"
+    xmlns:utils="clr-namespace:SmartHouse.UtilitiesClass"
+    Title="ניהול חשבונות">
 
-        <Label Text=" in this page you csan modifier your house accont esily"
-               HorizontalOptions="Center" FontSize="Medium"/>
-    </StackLayout>
+    <!-- 1) הוסף כאן את ה-ToolbarItems של ה-TabbedPage -->
+    <TabbedPage.ToolbarItems>
+        <!-- הכפתור הקיים -->
+        <ToolbarItem
+        Text="הוספת חשבון"
+        Clicked="ToolbarItem_Clicked"
+        IconImageSource="insert.png"
+        Priority="1"
+        Order="Primary" />
+        
+    </TabbedPage.ToolbarItems>
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="insert"
-                  Clicked="ToolbarItem_Clicked"
-                  IconImageSource="insert.png"
-                  Priority="2"
-                  Order="Primary"/>
+    <!-- 2) עכשיו הגדר את כל ה-Tabs -->
+    <!-- Overview Tab -->
+    <ContentPage Title="עמוד ראשי">
+        <StackLayout Padding="20">
+            <Label Text="Welcome to your personal utilities manager"
+             HorizontalOptions="Center"
+             FontSize="Large" />
+        </StackLayout>
+    </ContentPage>
+
+    <!-- חשמל -->
+    <utils:electricity
+      Title="חשמל"
+      IconImageSource="power.png" />
+
+    <!-- מים -->
+    <utils:water
+      Title="מים"
+      IconImageSource="water.png" />
+
+    <!-- גז -->
+    <utils:gas
+      Title="גז"
+      IconImageSource="gas.png" />
 
 
-
-
-    </ContentPage.ToolbarItems>
-
-</ContentPage>
+</TabbedPage>

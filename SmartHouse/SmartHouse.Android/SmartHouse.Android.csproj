@@ -95,6 +95,9 @@
     <AndroidResource Include="Resources\drawable\family.png" />
     <AndroidResource Include="Resources\drawable\acount.png" />
     <AndroidResource Include="Resources\drawable\cart.png" />
+    <AndroidResource Include="Resources\drawable\broke.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
     <Content Include="Resources\drawable\childrenWork.png" />
     <AndroidResource Include="Resources\drawable\delete.png" />
     <AndroidResource Include="Resources\drawable\pet.png" />
@@ -104,6 +107,15 @@
     <AndroidResource Include="Resources\drawable\basket.png" />
     <AndroidResource Include="Resources\drawable\professional.jpg" />
     <AndroidResource Include="Resources\drawable\task.png" />
+    <AndroidResource Include="Resources\drawable\icon.jpg">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\shopping.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\heshbonot.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
     <Content Include="Resources\drawable\write48.png" />
     <AndroidResource Include="Resources\drawable\write.png" />
     <Content Include="Resources\drawable\phone-call.png" />

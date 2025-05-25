@@ -18,7 +18,7 @@ namespace SmartHouse
         public MainPage()
         {
             InitializeComponent();
-            background1.Source = ImageSource.FromResource("SmartHouse.images.backgroundgray.jpg");
+            //background1.Source = ImageSource.FromResource("SmartHouse.images.backgroundgray.jpg");
         }
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
@@ -31,31 +31,31 @@ namespace SmartHouse
 
         }
 
-        private void Utilities_Clicked(object sender, EventArgs e)
+        private async void Utilities_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new NavigationPage(new Utilities()));
+            await Shell.Current.GoToAsync("utilities");
 
         }
 
         
-        private void Fun_Clicked(object sender, EventArgs e)
+        private async void Fun_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new NavigationPage(new FunMainPage()));
+            await Shell.Current.GoToAsync("fun");
         }
 
-        private void Shop_Clicked(object sender, EventArgs e)
+        private async void Shop_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new NavigationPage(new ShopListPage()));
+            await Shell.Current.GoToAsync("shop");
         }
 
-        private void Family_Clicked_4(object sender, EventArgs e)
+        private async void Family_Clicked_4(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new NavigationPage(new family())); 
+            await Shell.Current.GoToAsync("family");
         }
 
-        private void houseCare_Clicked(object sender, EventArgs e)
+        private async void houseCare_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new NavigationPage(new HouseCareMainPage()));
+            await Shell.Current.GoToAsync("housecare");
         }
     }
 }

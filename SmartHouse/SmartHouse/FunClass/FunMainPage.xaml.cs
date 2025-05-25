@@ -18,24 +18,24 @@ namespace SmartHouse.FunClass
 		}
 
 
-        private void vacations_Clicked(object sender, EventArgs e)
+        private async void vacations_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new NavigationPage(new VactionPage()));
+            await Shell.Current.GoToAsync(nameof(VactionPage));
         }
 
-        private void familyTime_Clicked(object sender, EventArgs e)
+        private async void familyTime_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new NavigationPage(new FamilyTimePage()));
+            await Shell.Current.GoToAsync(nameof(FamilyTimePage));
         }
 
-        private void BucketList_Clicked(object sender, EventArgs e)
+        private async void BucketList_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new NavigationPage(new BucketListPage()));
+            await Shell.Current.GoToAsync(nameof(BucketListPage));
         }
 
-        private void Copons_Clicked(object sender, EventArgs e)
+        private async void Copons_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new NavigationPage(new coponPage()));
+            await Shell.Current.GoToAsync(nameof(coponPage));
         }
     }
 }

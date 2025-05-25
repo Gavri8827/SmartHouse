@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:views="clr-namespace:SmartHouse"
+  xmlns:utils="clr-namespace:SmartHouse.UtilitiesClass"
+  xmlns:fc="clr-namespace:SmartHouse.FunClass"
+  xmlns:sc="clr-namespace:SmartHouse.shopcClass"
+  xmlns:hc="clr-namespace:SmartHouse.houseCare"
+  xmlns:fm="clr-namespace:SmartHouse.familyClass"
+  x:Class="SmartHouse.AppShell"
+  BackgroundColor="#FF6A00"
+  TitleColor="White"
+  ForegroundColor="White">
+
+
+        <!-- 1) Your HomePage, showing your original grid page: -->
+    <ShellItem Route="home" Shell.FlyoutBehavior="Disabled">
+        <ShellContent ContentTemplate="{DataTemplate views:MainPage}" />
+    </ShellItem> 
+    
+ 
+
+</Shell>

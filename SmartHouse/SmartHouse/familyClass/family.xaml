@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SmartHouse.family">
-    <ContentPage>
+             x:Class="SmartHouse.familyClass.family"
+             BackgroundColor="White">
+
+    <ContentPage BackgroundColor="White">
         <StackLayout VerticalOptions="Center" >
             <Label Text="clicked on the picture to start!" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" />
             
@@ -10,7 +12,8 @@
             
         </StackLayout>
     </ContentPage>
-    <ContentPage>
+    
+    <ContentPage BackgroundColor="White">
         <StackLayout VerticalOptions="Center">
             <Label Text="Pet management" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large"/>
             <ImageButton x:Name="image2" Clicked="ImageButton_Clicked"/>

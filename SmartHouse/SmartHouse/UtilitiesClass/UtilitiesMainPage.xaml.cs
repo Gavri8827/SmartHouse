@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace SmartHouse.UtilitiesClass
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class UtilitiesMainPage : ContentPage
+	public partial class UtilitiesMainPage : TabbedPage
 	{
 		public UtilitiesMainPage ()
 		{
@@ -19,8 +19,11 @@ namespace SmartHouse.UtilitiesClass
 
         private async void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new InsertUtilityInfo());
+            await Shell.Current.GoToAsync($"{nameof(InsertUtilityInfo)}");
+
 
         }
+
+        
     }
 }
