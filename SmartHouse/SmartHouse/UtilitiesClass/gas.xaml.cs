@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,6 +12,9 @@ namespace SmartHouse.UtilitiesClass
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class gas : ContentPage
     {
+        const string GasPaymentKey = "GasPayment";
+        const string GasDateKey = "GasDate";
+
         public gas()
         {
             InitializeComponent();
@@ -31,5 +34,16 @@ namespace SmartHouse.UtilitiesClass
               : "No data available";
 
         }
+
+        private void gas_clicked(object sender, EventArgs e)
+        {
+
+            var date = gasDatePicker.Date.ToString("yyyy-MM-dd");
+            var amount = gasPaymentEntry.Text;
+            Preferences.Set(GasDateKey, date);
+            Preferences.Set(GasPaymentKey, amount);
+            DisplayAlert("הצלחה", "הנתונים נשמרו בהצלחה!", "אישור");
+        }
+
     }
 }

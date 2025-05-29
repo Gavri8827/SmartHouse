@@ -19,20 +19,24 @@ namespace SmartHouse.UtilitiesClass
 
         async void Button_Clicked(object sender, EventArgs e)
         {
+            var gasConsumerNumber = GasConsumerEntry.Text?.Trim();
+            var gasCompany = GasCompanyPicker.SelectedItem as string;
+
             Application.Current.Properties["ElectricityAccount"] = elctricityNumberOcount.Text;
             Application.Current.Properties["ElectricityPhone"] = elctricityNumberPhone.Text;
 
             Application.Current.Properties["WaterAccount"] = WaterNumberOcount.Text;
             Application.Current.Properties["WaterPhone"] = WaterNumberPhone.Text;
 
-            Application.Current.Properties["GasAccount"] = GasNumberOcount.Text;
-            Application.Current.Properties["GasCompany"] = GasCompany.SelectedItem.ToString();;
+            // שמירה ב-Application.Properties
+            Application.Current.Properties["GasAccount"] = gasConsumerNumber;
+            Application.Current.Properties["GasCompany"] = gasCompany;
             Application.Current.Properties["GasPhone"] = GasNumberPhone.Text;
 
             // שמירת הנתונים כך שלא יימחקו
             await Application.Current.SavePropertiesAsync();
+            await DisplayAlert("הצלחה", "הנתונים נשמרו בהצלחה!", "אישור");
 
-            await DisplayAlert("Success", "Information saved!", "OK");
         }
     }
 }

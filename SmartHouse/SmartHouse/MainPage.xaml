@@ -103,7 +103,7 @@
                 HorizontalOptions="Center"/>
 
         <!-- שורה שנייה -->
-        <Button Text="fun"
+        <Button Text="פנאי"
                 ImageSource="fun.png"
                 BackgroundColor="Wheat"
                 Clicked="Fun_Clicked"
@@ -116,7 +116,7 @@
                 Grid.Column="0"
                 HorizontalOptions="Center"/>
 
-        <Button Text="רשימת קניות"
+        <Button Text="קניות"
                 ImageSource="shopping.png"
                 BackgroundColor="Wheat"
                 Clicked="Shop_Clicked"
@@ -130,7 +130,7 @@
                 HorizontalOptions="Center"/>
 
         <!-- כפתור תחתון במרכז -->
-        <Button Text="family"
+        <Button Text="משפחה"
                 ImageSource="family.png"
                 BackgroundColor="Wheat"
                 Clicked="Family_Clicked_4"

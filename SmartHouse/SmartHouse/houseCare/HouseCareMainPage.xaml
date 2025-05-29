@@ -2,22 +2,29 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SmartHouse.houseCare.HouseCareMainPage"
-             Title="House Care Main Page">
+             Title="תחזוקת הבית">
 
     <StackLayout Padding="15">
-        <ImageButton  x:Name="prof" WidthRequest="220"
-        HeightRequest="220"
-        HorizontalOptions="Center"
-        VerticalOptions="Center" />
+        <Image Source="professional.jpg"
+       WidthRequest="220"
+       HeightRequest="220"
+       Aspect="AspectFit"
+       HorizontalOptions="Center"
+       VerticalOptions="Center" />
 
-        <ImageButton  x:Name="regmai" WidthRequest="220"
-        HeightRequest="220"
-        HorizontalOptions="Center"
-        VerticalOptions="Center" />
-        
-        <Button Text="professional" Clicked="Button_Clicked"/>
-        <Button Text="regular maintence" Clicked="Button_Clicked_1"/>
-        
+
+        <Image Source="RegularMaintenance.jpg"
+       WidthRequest="220"
+       HeightRequest="220"
+       Aspect="AspectFit"
+       HorizontalOptions="Center"
+       VerticalOptions="Center" />
+
+
+        <Button Text="איתור טכנאי" BackgroundColor="#FF6A00" Clicked="Pro_Clicked"/>
+        <Button Text="תחזוקה שוטפת" BackgroundColor="#FF6A00" Clicked="Maintance_clicked"/>
+        <Button Text="דוחות" BackgroundColor="#FF6A00" Clicked="Summary_Clicked"/>
+
     </StackLayout>
     
 </ContentPage>

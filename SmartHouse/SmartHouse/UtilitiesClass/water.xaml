@@ -3,11 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SmartHouse.UtilitiesClass.water">
     <StackLayout>
-        <Label Text="Water account number:" FontSize="Medium"/>
+        <Grid>
+            <Image Source="waterInvoice.png"
+            Aspect="AspectFit"
+            HorizontalOptions="Center"
+            VerticalOptions="Center" />
+        </Grid>
+        <Label Text="מספר משלם:" FontSize="Medium"/>
         <Label x:Name="WaterAcountNumber" FontSize="Large" TextColor="Black"/>
 
-        <Label Text="Last payment" FontSize="Medium"/>
-        <Entry Placeholder="0.00" Keyboard="Numeric"/>
+        <Label Text="מספר נכס:" FontSize="Medium"/>
+        <Label x:Name="WaterPropertytNumber" FontSize="Large" TextColor="Black"/>
+
+        <Label Text="תאריך לתשלום:" FontSize="Medium"/>
+            <DatePicker x:Name="WaterDatePicker"
+        Format="dd/MM/yyyy"
+        HorizontalOptions="Fill"
+        VerticalOptions="Center" />
+
+        <Label Text="סכום לתשלום:" FontSize="Medium"/>
+        <Entry x:Name="WaterPaymentEntry"
+         Placeholder="0.00"
+         Keyboard="Numeric"/>
+
+        <Button Text="שמור" BackgroundColor="#FF6A00" Clicked="water_clicked"/>
 
 
     </StackLayout>

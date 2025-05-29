@@ -5,18 +5,32 @@
              Title="Electrical Data">
 
     <StackLayout>
-        <Label Text="Electricity account number:" FontSize="Medium"/>
-       
+        <Grid>
+            <Image Source="hashmal.png"
+             Aspect="AspectFit"
+             HorizontalOptions="Center"
+             VerticalOptions="Center" />
+        </Grid>
+
+        <Label Text="מספר חשבון חוזה:" FontSize="Medium"/>
         <Label x:Name="electricityNumber" FontSize="Large" TextColor="Black"/>
 
-        <Label Text="Electricity phone number:" FontSize="Medium"/>
+        <Label Text="מספר טלפון חברת החשמל:" FontSize="Medium"/>
         <Label x:Name="electricityphoneNumber" FontSize="Large" TextColor="Black"/>
 
-        <Label Text="Last payment" FontSize="Medium"/>
-        <Entry Placeholder="0.00" Keyboard="Numeric" x:Name="electrictyPaymenr"/>
+        <Label Text="תאריך לתשלום:" FontSize="Medium"/>
+        <DatePicker x:Name="electricityDatePicker"
+                Format="dd/MM/yyyy"
+                HorizontalOptions="Fill"
+                VerticalOptions="Center" />
+
+        <Label Text="סכום לתשלום:" FontSize="Medium"/>
+        <Entry x:Name="electricityPaymentEntry"
+           Placeholder="0.00"
+           Keyboard="Numeric"/>
 
 
-        <Button Text="Save" Clicked="Button_Clicked"/>
+        <Button Text="שמור" BackgroundColor="#FF6A00" Clicked="electricity_clicked"/>
 
 
 

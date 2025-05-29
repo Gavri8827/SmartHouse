@@ -12,10 +12,8 @@ namespace SmartHouse.UtilitiesClass
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class electricity : ContentPage
     {
-
-
-        private string AcountelectricityNumber;
-        private string LastelectricityPayment;
+        const string LastElectricityPaymentKey = "LastElectricityPayment";
+        const string ElectricityDateKey = "ElectricityDate";
         public electricity()
         {
             InitializeComponent();
@@ -38,12 +36,18 @@ namespace SmartHouse.UtilitiesClass
 
 
 
-            private void Button_Clicked(object sender, EventArgs e)
+            private void electricity_clicked(object sender, EventArgs e)
         {
-            
-            Preferences.Set(LastelectricityPayment, electrictyPaymenr.Text);
+            string date = electricityDatePicker.Date.ToString("yyyy-MM-dd");
+            string amount = electricityPaymentEntry.Text;
+            Preferences.Set(LastElectricityPaymentKey, amount);
+            Preferences.Set(ElectricityDateKey, date);
+            DisplayAlert("הצלחה", "הנתונים נשמרו בהצלחה!", "אישור");
         }
 
-       
     }
-}
+
+
+
+
+    }

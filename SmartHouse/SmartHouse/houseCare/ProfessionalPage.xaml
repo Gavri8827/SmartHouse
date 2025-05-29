@@ -2,37 +2,95 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SmartHouse.houseCare.ProfessionalPage">
-    <ListView x:Name="professionalList" SeparatorColor="Gray" >
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10" VerticalOptions="Fill">
-                        <!-- מקרה הפרטים: מתפרס בצד שמאל ומשתמש ב-FillAndExpand כדי לתפוס מקום נדרש -->
-                        <StackLayout Orientation="Horizontal" Spacing="10">
-                                    <Label Text="{Binding name}"
-                                     FontSize="Medium"
-                   TextColor="Goldenrod"
-                   FontAttributes="Bold"/>
-                                    <Label Text="{Binding Description}"
-                   FontSize="Small"
-                   TextColor="Goldenrod"
-                   FontAttributes="Bold"/>
-                                    <Label Text="{Binding phoneNumber}"
-                   FontSize="Medium"
-                   TextColor="Goldenrod"
-                   FontAttributes="Bold"/>
-                                </StackLayout>
 
-                                <!-- מקרה כפתורי הפעולה: מתפרס בצד ימין ומסודר באופן אופקי -->
-                              
-                    </StackLayout>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="הוסף"
+                     IconImageSource="add.png"
+                     Order="Primary"
+                     Priority="0"
+                     Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
 
+    <StackLayout Padding="10" Spacing="0">
 
+        <Label Text="רשימת אנשי מקצוע"
+               FontSize="Large"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="Black"
+               Margin="0,0,0,10"/>
 
+        <ListView x:Name="professionalList"
+                  SeparatorVisibility="None"
+                  HasUnevenRows="False">
 
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
+            <!-- כותרת הטבלה -->
+            <ListView.Header>
+                <StackLayout Spacing="0">
+                    <Grid ColumnDefinitions="3*,2*,2*"
+                          Padding="10"
+                          BackgroundColor="#FFA500">
+                        <!-- טלפון - יישור מרכז -->
+                        <Label Text="טלפון"
+                               Grid.Column="0"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               TextColor="White"/>
+                        <!-- מקצוע - יישור מרכז -->
+                        <Label Text="מקצוע"
+                               Grid.Column="1"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               TextColor="White"/>
+                        <!-- שם - יישור מרכז -->
+                        <Label Text="שם"
+                               Grid.Column="2"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               TextColor="White"/>
+                    </Grid>
+                    <!-- קו הפרדה תחת הכותרת -->
+                    <BoxView HeightRequest="1"
+                             Color="Gray"
+                             HorizontalOptions="Fill"/>
+                </StackLayout>
+            </ListView.Header>
 
-    </ListView>
+            <!-- שורות הטבלה -->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Spacing="0">
+                            <Grid ColumnDefinitions="3*,2*,2*"
+                                  Padding="10">
+                                <!-- phone מימין -->
+                                <Label Text="{Binding phoneNumber}"
+                                       Grid.Column="0"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"/>
+                                <!-- profession מימין -->
+                                <Label Text="{Binding Description}"
+                                       Grid.Column="1"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"/>
+                                <!-- name מימין -->
+                                <Label Text="{Binding name}"
+                                       Grid.Column="2"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"/>
+                            </Grid>
+                            <!-- קו הפרדה בין שורות -->
+                            <BoxView HeightRequest="1"
+                                     Color="LightGray"
+                                     HorizontalOptions="Fill"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </StackLayout>
 </ContentPage>

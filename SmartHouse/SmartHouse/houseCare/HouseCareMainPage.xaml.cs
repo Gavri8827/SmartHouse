@@ -15,18 +15,22 @@ namespace SmartHouse.houseCare
         public HouseCareMainPage()
         {
             InitializeComponent();
-            prof.Source = ImageSource.FromResource("SmartHouse.images.professional.jpg");
-            regmai.Source = ImageSource.FromResource("SmartHouse.images.RegularMaintenance.jpg");
+           
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private async void Pro_Clicked(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync(nameof(ProfessionalPage));
         }
 
-        private async void Button_Clicked_1(object sender, EventArgs e)
+        private async void Maintance_clicked(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync(nameof(Maintence));
+        }
+
+        private async void Summary_Clicked(object sender, EventArgs e)
+        {
+            //await Shell.Current.GoToAsync(nameof(Maintence));
         }
     }
 }

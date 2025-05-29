@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SmartHouse.houseCare.houseTasks;
-
+using SmartHouse.houseCare.professional;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
 
 namespace SmartHouse.houseCare
 {
@@ -18,102 +15,91 @@ namespace SmartHouse.houseCare
             InitializeComponent();
             BuildTasksGrid();
         }
+
         private void BuildTasksGrid()
         {
-            // אתחול רשימת המטלות – ניתן לטעון נתונים ממקור חיצוני
+            // אתחול רשימת המטלות – ניתן להטעין נתונים ממקור חיצוני
             var tasks = new List<TaskItem>
             {
-                new TaskItem { TaskName = "ניקוי מזגנים" },
-                new TaskItem { TaskName = "בדיקת תאורה" },
-                new TaskItem { TaskName = "בדיקת תאורה" },
-                new TaskItem { TaskName = "בדיקת תאורה" }
-                // ניתן להוסיף מטלות נוספות כאן...
+                new TaskItem { TaskName = "ניקוי מזגנים", IconSource = "icon_ac.png" },
+                new TaskItem { TaskName = "בדיקת תאורה", IconSource = "icon_light.png" },
+                new TaskItem { TaskName = "בדיקת צנרת", IconSource = "icon_pipe.png" },
+                new TaskItem { TaskName = "בדיקת גלאי עשן", IconSource = "icon_smoke.png" }
             };
-            TasksGrid.RowDefinitions.Clear();
-            for (int i = 0; i < tasks.Count; i++)
-            {
-                TasksGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
-            }
 
-            // ניקוי תוכן קיים ב-Grid לפני הוספת פריטים חדשים
+            // הכנה ל־Grid
+            TasksGrid.RowDefinitions.Clear();
             TasksGrid.Children.Clear();
 
-            // הוספת כל מטלה כאלמנט בתוך Frame לשורה המתאימה
             for (int i = 0; i < tasks.Count; i++)
             {
+                // הגדרת שורה אוטומטית
+                TasksGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
                 var task = tasks[i];
-                var contentLayout = new StackLayout
-                {
-                    Orientation = StackOrientation.Vertical,
-                    HorizontalOptions = LayoutOptions.Center,
-                    VerticalOptions = LayoutOptions.Center
-                };
-                
 
-                // הוספת Label למטה, שמציג את שם המטלה
-                var label = new Label
-                {
-                    Text = task.TaskName, // task הוא המשתנה שמייצג את המטלה שנמצאת בלולאה
-                    FontSize = 20,
-                    HorizontalOptions = LayoutOptions.Center,
-                    VerticalOptions = LayoutOptions.Center
-                };
-                contentLayout.Children.Add(label);
-
-                var label1 = new Label
-                {
-                    Text = task.CompletedDate.ToString(), 
-                    FontSize = 20,
-                    HorizontalOptions = LayoutOptions.Center,
-                    VerticalOptions = LayoutOptions.Center
-                };
-                contentLayout.Children.Add(label1);
-
-
-                var image = new Image
-                {
-                    Source = "task.png", 
-                    Aspect = Aspect.AspectFit,
-                    HeightRequest = 80,
-                    WidthRequest = 80,
-                    HorizontalOptions = LayoutOptions.Center
-                };
-                contentLayout.Children.Add(image);
-
-
-
+                // Frame לעיטוף תכולת המטלה
                 var frame = new Frame
                 {
-                    Padding = 15,
-                    Margin = 5,
-                    BackgroundColor = Color.LightGray,
-                    CornerRadius = 10,
-                    HasShadow = true,
-                    Content = contentLayout
-                    
+                    CornerRadius = 12,
+                    Padding = 10,
+                    Margin = new Thickness(0, 5),
+                    BackgroundColor = Color.FromHex("#FFF3E0"),    // רקע בהיר
+                    BorderColor = Color.FromHex("#FF9800"),        // מסגרת כתומה
+                    HasShadow = false
                 };
 
-                
-                var tapGesture = new TapGestureRecognizer();
-                tapGesture.Tapped += async (s, e) =>
+                // Layout אופקי לתמונה וטקסט
+                var contentLayout = new StackLayout
                 {
-                    string result = await DisplayPromptAsync(
-                        "הזן תאריך",
-                        $"הזן את תאריך ביצוע המשימה '{task.TaskName}' (לדוגמה: 2025-05-03):");
-
-                    if (DateTime.TryParse(result, out DateTime date))
-                    {
-                        task.CompletedDate = date;
-                        await DisplayAlert("מצוין", "התאריך נקלט בהצלחה", "אישור");
-                    }
-                    else
-                    {
-                        await DisplayAlert("שגיאה", "פורמט תאריך לא חוקי", "אישור");
-                    }
+                    Orientation = StackOrientation.Horizontal,
+                    Spacing = 15,
+                    VerticalOptions = LayoutOptions.Center
                 };
-                frame.GestureRecognizers.Add(tapGesture);
 
-                
+                // אייקון מטלה
+                contentLayout.Children.Add(new Image
+                {
+                    Source = task.IconSource,
+                    HeightRequest = 40,
+                    WidthRequest = 40,
+                    VerticalOptions = LayoutOptions.Center
+                });
+
+                // Layout אנכי לטקסט ושדה התאריך
+                var textLayout = new StackLayout
+                {
+                    Orientation = StackOrientation.Vertical,
+                    Spacing = 4,
+                    VerticalOptions = LayoutOptions.CenterAndExpand
+                };
+
+                // שם המטלה
+                textLayout.Children.Add(new Label
+                {
+                    Text = task.TaskName,
+                    FontSize = 18,
+                    FontAttributes = FontAttributes.Bold,
+                    TextColor = Color.FromHex("#5D4037")  // חום כהה
+                });
+
+                // DatePicker לבחירת תאריך ביצוע
+                var dp = new DatePicker
+                {
+                    Date = task.CompletedDate ?? DateTime.Today,
+                    Format = "yyyy-MM-dd",
+                    TextColor = Color.FromHex("#FF5722"), // כתום כהה
+                    HorizontalOptions = LayoutOptions.Start
+                };
+                dp.DateSelected += (s, e) =>
+                {
+                    task.CompletedDate = e.NewDate;
+                };
+                textLayout.Children.Add(dp);
+
+                contentLayout.Children.Add(textLayout);
+                frame.Content = contentLayout;
+
+                // הוספת ה־Frame ל־Grid
                 TasksGrid.Children.Add(frame, 0, i);
             }
         }

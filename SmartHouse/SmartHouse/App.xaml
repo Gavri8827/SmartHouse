@@ -4,10 +4,30 @@
              xmlns:views="clr-namespace:SmartHouse"
              x:Class="SmartHouse.App">
     <Application.Resources>
+        <ResourceDictionary>
 
+            <Style TargetType="Button">
+                <!-- רקע כתום -->
+                <Setter Property="BackgroundColor" Value="#FFA500" />
+                <!-- טקסט לבן מודגש -->
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <!-- ריווח פנימי -->
+                <Setter Property="Padding" Value="12,8" />
+                <!-- לא למלא את כל הרוחב, אלא להיות במרכז -->
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <!-- (אופציונלי) למרכז גם אנכית בתוך המכולה -->
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="WidthRequest" Value="200" /> 
+                <!-- פינות מעוגלות -->
+                <Setter Property="CornerRadius" Value="4" />
+                <!-- רוחב אוטומטי לפי תוכן -->
+                
+            </Style>
+
+        </ResourceDictionary>
     </Application.Resources>
 
-    <!-- כאן מגדיר את ה‐MainPage כ‐NavigationPage בצבעים שלך -->
     <Application.MainPage>
         <views:AppShell />
     </Application.MainPage>

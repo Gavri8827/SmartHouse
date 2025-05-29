@@ -19,13 +19,37 @@ namespace SmartHouse.houseCare
         {
             InitializeComponent();
             CHlist = new ObservableCollection<professinalnfo> {
-            new professinalnfo{ name= "Haharon cohen", Description = "electricity", phoneNumber = "0506789932"},
-            new professinalnfo{ name= "Shalom yoram", Description = "build instractor", phoneNumber = "050987654"},
+            new professinalnfo{ name= "שרון כהן", Description = "חשמלאי", phoneNumber = "0506789932"},
+            new professinalnfo{ name= "יורם שלום", Description = "קבלן בנייה", phoneNumber = "050987654"},
             };
             professionalList.ItemsSource = CHlist;
         }
 
-        private void ImageButton_Clicked(object sender, EventArgs e)
+        // האירוע של הכפתור בתפריט
+        private async void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            // מבקשים מהמשתמש פרטים
+            string name = await DisplayPromptAsync("הוספת מקצוע", "הזן שם מלא:");
+            if (string.IsNullOrWhiteSpace(name)) return;
+
+            string desc = await DisplayPromptAsync("הוספת מקצוע", "הזן מקצוע:");
+            if (string.IsNullOrWhiteSpace(desc)) return;
+
+            string phone = await DisplayPromptAsync("הוספת מקצוע", "הזן טלפון:");
+            if (string.IsNullOrWhiteSpace(phone)) return;
+
+            // מוסיפים לרשימה
+            CHlist.Add(new professinalnfo
+            {
+                name = name,
+                Description = desc,
+                phoneNumber = phone
+            });
+        }
+    
+
+
+private void ImageButton_Clicked(object sender, EventArgs e)
         {
 
         }

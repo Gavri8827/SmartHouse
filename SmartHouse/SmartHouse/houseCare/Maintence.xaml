@@ -2,9 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SmartHouse.houseCare.Maintence"
-             Title="Maintence of the house care">
-    <Grid x:Name="TasksGrid" Padding="10" RowSpacing="10" ColumnSpacing="10">
-       
-        
-    </Grid>
+             Title="תחזוקה שוטפת">
+
+    <ScrollView>
+        <Grid x:Name="TasksGrid"
+              ColumnDefinitions="*"
+              RowSpacing="10"
+              Padding="10" />
+    </ScrollView>
 </ContentPage>
+
+

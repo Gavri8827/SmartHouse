@@ -4,8 +4,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="SmartHouse.UtilitiesClass.UtilitiesMainPage"
     xmlns:utils="clr-namespace:SmartHouse.UtilitiesClass"
-    Title="ניהול חשבונות">
+    Title="ניהול חשבונות"
+    BarBackgroundColor="White"
+    BarTextColor="#FF6A00">
+    <!--" SelectedTabColor="White"-->
+    
 
+    
     <!-- 1) הוסף כאן את ה-ToolbarItems של ה-TabbedPage -->
     <TabbedPage.ToolbarItems>
         <!-- הכפתור הקיים -->
@@ -20,28 +25,41 @@
 
     <!-- 2) עכשיו הגדר את כל ה-Tabs -->
     <!-- Overview Tab -->
-    <ContentPage Title="עמוד ראשי">
-        <StackLayout Padding="20">
-            <Label Text="Welcome to your personal utilities manager"
-             HorizontalOptions="Center"
-             FontSize="Large" />
-        </StackLayout>
+    <ContentPage Title="עמוד
+                 ראשי">
+        <StackLayout Padding="20" Spacing="5">
+                <Label Text="ברוכים הבאים לעמוד ניהול חשבונות" 
+                       FontSize="24" HorizontalOptions="Center"/>
+            <Label Text="בעמוד זה תוכלו לרכז את כל המנויים והחיובים שלכם במקום אחד – גז, חשמל, אינטרנט ועוד." 
+                       FontSize="20" HorizontalOptions="Center"/>
+            <Label Text="בפעם הראשונה הזינו את פרטי החשבונות, ובכל חודש עדכנו את סכום התשלום"
+                       FontSize="20" HorizontalOptions="Center"/>
+            <Label Text="בהמשך תוכלו לצפות בדוח המסכם את מועדי התשלומים והסכומים ששולמו."
+             FontSize="20" HorizontalOptions="Center"/>
+            <Label Text="כך תעקבו בקלות אחר מועדי החיוב, תוודאו ששילמתם בזמן ותהיו בשליטה מלאה על ההוצאות שלכם!"
+                   FontSize="20" HorizontalOptions="Center"/>
+            </StackLayout>
     </ContentPage>
 
     <!-- חשמל -->
     <utils:electricity
       Title="חשמל"
-      IconImageSource="power.png" />
+      IconImageSource="electricitySymbol.JPG" />
 
     <!-- מים -->
     <utils:water
       Title="מים"
-      IconImageSource="water.png" />
+      IconImageSource="waterSymbol.JPG" />
 
     <!-- גז -->
     <utils:gas
       Title="גז"
-      IconImageSource="gas.png" />
+      IconImageSource="gasSymbol.jpg" />
+
+    <!-- דוחות -->
+    <utils:PaymentReportPage
+  Title="דוחות"
+  IconImageSource="gas.png" />
 
 
 </TabbedPage>
