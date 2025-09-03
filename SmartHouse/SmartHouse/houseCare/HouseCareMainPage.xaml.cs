@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace SmartHouse.houseCare
+namespace SmartHouse.HouseCare
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HouseCareMainPage : ContentPage

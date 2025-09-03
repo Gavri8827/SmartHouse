@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.UtilitiesClass.PaymentHistoryPage"
+             Title="דוח שלומים">
+    <StackLayout Padding="10">
+
+
+        <Label Text="בחר סוג שירות:" FontAttributes="Bold"/>
+        <Picker x:Name="UtilityTypePicker" SelectedIndexChanged="FilterChanged">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>הכל</x:String>
+                    <x:String>Electricity</x:String>
+                    <x:String>Water</x:String>
+                    <x:String>Gas</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="בחר חודש:" FontAttributes="Bold" />
+        <DatePicker x:Name="MonthPicker" DateSelected="FilterChanged" Format="MMMM yyyy" />
+
+        <ListView x:Name="HistoryListView" Margin="0,10,0,0" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell >
+                        <StackLayout Padding="5" >
+                            <Label Text="{Binding UtilityType}" FontAttributes="Bold"/>
+                            <Label Text="{Binding Date}" />
+                            <Label Text="{Binding Amount, StringFormat='סכום: {0:C}'}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+</ContentPage>

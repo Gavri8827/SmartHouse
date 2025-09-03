@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SmartHouse.houseCare.professional
+namespace SmartHouse.HouseCare.Professional
 {
-    internal class professinalnfo
+   public class Professinalnfo
     {
-        public string name { get; set; }
+        public string Name { get; set; }
         public string Description { get; set; }
-        public string phoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
+
+        public string FirebaseKey { get; set; }
     }
 }

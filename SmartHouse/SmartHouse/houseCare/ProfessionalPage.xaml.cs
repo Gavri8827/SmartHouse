@@ -4,31 +4,40 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SmartHouse.familyClass.childrenInfo;
-using SmartHouse.houseCare.professional;
+using SmartHouse.FamilyClass.ChildrenInfo;
+using SmartHouse.Firebase;
+using SmartHouse.HouseCare.Professional;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace SmartHouse.houseCare
+namespace SmartHouse.HouseCare
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProfessionalPage : ContentPage
     {
-        ObservableCollection<professinalnfo> CHlist;
+        private FirebaseHelper firebaseHelper = new FirebaseHelper();
+        ObservableCollection<Professinalnfo> CHlist;
         public ProfessionalPage()
         {
             InitializeComponent();
-            CHlist = new ObservableCollection<professinalnfo> {
-            new professinalnfo{ name= "שרון כהן", Description = "חשמלאי", phoneNumber = "0506789932"},
-            new professinalnfo{ name= "יורם שלום", Description = "קבלן בנייה", phoneNumber = "050987654"},
-            };
-            professionalList.ItemsSource = CHlist;
+            
+        }
+        protected override async void OnAppearing()
+        {
+            try
+            {
+                base.OnAppearing();
+
+                professionalList.ItemsSource = await firebaseHelper.GetProftList();
+
+            }
+            catch { }
+
         }
 
-        // האירוע של הכפתור בתפריט
         private async void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-            // מבקשים מהמשתמש פרטים
+            
             string name = await DisplayPromptAsync("הוספת מקצוע", "הזן שם מלא:");
             if (string.IsNullOrWhiteSpace(name)) return;
 
@@ -38,25 +47,40 @@ namespace SmartHouse.houseCare
             string phone = await DisplayPromptAsync("הוספת מקצוע", "הזן טלפון:");
             if (string.IsNullOrWhiteSpace(phone)) return;
 
-            // מוסיפים לרשימה
-            CHlist.Add(new professinalnfo
+           
+             var NewP = new Professinalnfo
             {
-                name = name,
+                Name = name,
                 Description = desc,
-                phoneNumber = phone
-            });
+                PhoneNumber = phone
+            };
+            await firebaseHelper.CreateProfList(NewP);
+            professionalList.ItemsSource = await firebaseHelper.GetProftList();
         }
-    
 
-
-private void ImageButton_Clicked(object sender, EventArgs e)
+        private async void ProfessionalList_ItemTapped(object sender, ItemTappedEventArgs e)
         {
+            if (e.Item == null)
+                return;
 
+            var selectedItem = e.Item as Professinalnfo; // שנה ל-class שלך, לדוגמה: ProfessionalInfo
+
+            bool confirm = await DisplayAlert("אישור מחיקה",
+                                              $"האם אתה בטוח שברצונך למחוק את {selectedItem.Name}?", // או שדה אחר רלוונטי
+                                              "כן", "לא");
+
+            if (confirm)
+            {
+                // מחיקה מה- Firebase או מהמקור שלך
+                await firebaseHelper.DeleteProfessinal(selectedItem.FirebaseKey); // שנה בהתאם לפונקציה שלך
+
+                // רענון הרשימה
+                professionalList.ItemsSource = await firebaseHelper.GetProftList();
+            }
+
+            // ניקוי הבחירה, כדי למנוע מצב שהפריט יישאר מסומן
+            professionalList.SelectedItem = null;
         }
 
-        private void ImageButton_Clicked_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

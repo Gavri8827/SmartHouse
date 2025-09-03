@@ -2,49 +2,70 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SmartHouse.FunClass.FunMainPage">
-    <StackLayout Padding="20" Spacing="30" VerticalOptions="Center">
+    <StackLayout Padding="25" Spacing="20" >
 
-        <Label Text="Here you can get some ideas anf save your voutcer"
-               FontSize="Large"
-               HorizontalOptions="Center" />
+        <Label Text="ברוכים הבאים לעמוד הכיף והפנאי!" 
+               FontSize="24" HorizontalOptions="Center" HorizontalTextAlignment="Center" 
+VerticalTextAlignment="Center" TextColor="Black" FontAttributes="Bold" />
+        <Label Text="בעמוד זה תוכלו לנהל את פעילויות הפנאי שלכם: " 
+               FontSize="20" HorizontalOptions="Center" 
+        HorizontalTextAlignment="Center" 
+        VerticalTextAlignment="Center"
+                   TextColor="Black"/>
+        <Label Text="1. תוכלו לשמור את הקופונים שקיבלתם" 
+       FontSize="20" HorizontalOptions="Center" 
+HorizontalTextAlignment="Center" 
+VerticalTextAlignment="Center"
+           TextColor="Black"/>
+        <Label Text="2.לכתוב רעיונות לבילוי שהייתם רוצים לעשות " 
+       FontSize="20" HorizontalOptions="Center" 
+HorizontalTextAlignment="Center" 
+VerticalTextAlignment="Center"
+           TextColor="Black"/>
+        <Label Text="3.לתכנן את חופשתכם הבאה" 
+       FontSize="20" HorizontalOptions="Center" 
+HorizontalTextAlignment="Center" 
+VerticalTextAlignment="Center"
+           TextColor="Black"/>
 
         <Button x:Name="Copons"
-                Text="Manage Your Coppon's"
+                Text="קופונים"
                 Clicked="Copons_Clicked"
-                BackgroundColor="#B76E79"
+                BackgroundColor="LightPink"
                 TextColor="White"
                 CornerRadius="15"
                 Padding="15"
-                FontSize="Medium" />
+                FontSize="Medium"
+                Margin="0,30,0,0"/>
 
         <Button x:Name="vacations"
-               Text="Plan your next vaction"
+               Text="תכנון חופשה"
                Clicked="vacations_Clicked"
-               BackgroundColor="#B76E79"
+               BackgroundColor="LightPink"
                TextColor="White"
                CornerRadius="15"
                Padding="15"
                FontSize="Medium" />
-      
-        <Button x:Name="familyTime"
+
+        <!-- <Button x:Name="familyTime"
               Text="Family Time"
               Clicked="familyTime_Clicked"
-               BackgroundColor="#B76E79"
+               BackgroundColor="LightPink"
                TextColor="White"
                CornerRadius="15"
                Padding="15"
-               FontSize="Medium" />
-        
+               FontSize="Medium" />-->
+
         <Button x:Name="BucketList"
-              Text="Fun Bucket List"
+              Text="רעיונות לבילוי"
               Clicked="BucketList_Clicked"
-               BackgroundColor="#B76E79"
+               BackgroundColor="LightPink"
                TextColor="White"
                CornerRadius="15"
                Padding="15"
                FontSize="Medium" />
-        
-        
+
+
 
 
 

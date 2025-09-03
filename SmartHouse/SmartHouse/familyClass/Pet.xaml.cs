@@ -5,44 +5,74 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SmartHouse.familyClass.childrenInfo;
-using SmartHouse.familyClass.petInfo;
+using SmartHouse.FamilyClass.ChildrenInfo;
+using SmartHouse.FamilyClass.PetInfo;
+using SmartHouse.Firebase;
+using SmartHouse.FunClass.CoponList;
+using SmartHouse.FunClass;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Drawing;
+using PetModel = SmartHouse.FamilyClass.PetInfo.PetInfo;
 
-namespace SmartHouse.familyClass
+namespace SmartHouse.FamilyClass
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Pet : ContentPage
-	{
-        ObservableCollection<PetInfo> Plist;
-        public Pet ()
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Pet : ContentPage
+    {
+        private FirebaseHelper firebaseHelper = new FirebaseHelper();
+        public Pet()
         {
-			InitializeComponent ();
-            Plist = new ObservableCollection<PetInfo> {
-            new PetInfo{ Name= "Lucky", Kind = "Dog", Image = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Common_Seal_Phoca_vitulina_1.jpg/500px-Common_Seal_Phoca_vitulina_1.jpg"},
-            new PetInfo{ Name= "Darvider",Kind = "Snake" ,Image = "https://2.a7.org/files/pictures/781x439/1160971.jpg"},
-            };
-            PetList.ItemsSource = Plist;
+            InitializeComponent();
+           
         }
 
-        private void ImageButton_Clicked(object sender, EventArgs e)
+
+        protected override async void OnAppearing()
         {
-
-
+            try
+            {
+                base.OnAppearing();
+                PetList.ItemsSource = await firebaseHelper.GetPetList();
+            }
+            catch { }
         }
 
-        private void ImageButton_Clicked_1(object sender, EventArgs e)
-        {
 
+        private async void ImageButton_Clicked_1(object sender, EventArgs e)
+        {
+            var button = sender as ImageButton;
+            var petToDelete = button?.BindingContext as PetModel;
+
+            if (petToDelete == null)
+                return;
+            bool isConfirmed = await DisplayAlert("אישור מחיקה", "האם אתה בטוח שברצונך למחוק?", "כן", "לא");
+            if (isConfirmed)
+            {
+                await firebaseHelper.DeletePet(petToDelete.FirebaseKey);
+                PetList.ItemsSource = await firebaseHelper.GetPetList();
+            }
+            else { }
         }
 
         async void PetList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var pet = e.SelectedItem as PetInfo;
-            var PetPage = new PetInfoPage();
-            PetPage.BindingContext = pet;
-            await Navigation.PushAsync(PetPage);
+            if (e.SelectedItem is PetModel pet)
+            {
+                // לבטל סימון כדי שבריחזור לא יופיע מסומן
+                ((ListView)sender).SelectedItem = null;
+
+                // נווט עם Shell, מעביר את pet.Id כפרמטר
+                System.Diagnostics.Debug.WriteLine($"ניווט ל־PetInfoPage עם id = {pet.FirebaseKey}");
+                await Shell.Current.GoToAsync(
+                $"{nameof(PetInfoPage)}?petId={pet.FirebaseKey}");
+            }
+        }
+
+        private async void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(EditPet));
         }
     }
 }
+

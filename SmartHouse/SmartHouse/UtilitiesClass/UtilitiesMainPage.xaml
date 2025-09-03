@@ -42,22 +42,22 @@
     </ContentPage>
 
     <!-- חשמל -->
-    <utils:electricity
+    <utils:Electricity
       Title="חשמל"
       IconImageSource="electricitySymbol.JPG" />
 
     <!-- מים -->
-    <utils:water
+    <utils:Water
       Title="מים"
       IconImageSource="waterSymbol.JPG" />
 
     <!-- גז -->
-    <utils:gas
+    <utils:Gas
       Title="גז"
       IconImageSource="gasSymbol.jpg" />
 
     <!-- דוחות -->
-    <utils:PaymentReportPage
+    <utils:PaymentHistoryPage
   Title="דוחות"
   IconImageSource="gas.png" />
 

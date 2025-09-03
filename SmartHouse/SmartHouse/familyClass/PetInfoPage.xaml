@@ -1,32 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SmartHouse.familyClass.PetInfoPage"
-             Title="{Binding Name}">
-    <StackLayout Margin="20">
-        <Image Source="{Binding Image}"/>
-        <Label Text="{Binding Name}" FontSize="Large" TextColor="Silver"/>
-        <Label Text="{Binding Kind}" FontSize ="Large" TextColor="Silver"/>
-        <Label Text="{Binding Insurance}" FontSize ="Large" TextColor="Silver"/>
+             x:Class="SmartHouse.FamilyClass.PetInfoPage"
+             Title="{Binding Name}"
+             BackgroundColor="#f5f5f5">
 
-        <Label Text="insert number of insurance:" FontSize="Medium" TextColor="Green"/>
-        <Entry x:Name="InsuranceNumberOcount" Keyboard="Numeric" Placeholder="InsuranceNumber"
-            ReturnType="Next"/>
+    <ScrollView>
+        <StackLayout Margin="20" Spacing="20">
 
-        <Label Text="Next time of medicale treatment:" FontSize="Medium" TextColor="Green"/>
-        <DatePicker x:Name="date" DateSelected="DatePicker_DateSelected" Format="D"/>
+            <!-- תמונה -->
+            <Frame Padding="0" CornerRadius="15" HasShadow="True" BackgroundColor="White">
+                <Image Source="{Binding Image}" Aspect="AspectFill" HeightRequest="200"/>
+            </Frame>
 
-        <Label Text="time of corrent medicale treatment:" FontSize="Medium" TextColor="Green"/>
-        <Label x:Name="correntDate"/>
+            <!-- פרטים על החיה -->
+            <Frame BackgroundColor="White" CornerRadius="15" Padding="15" HasShadow="True">
+                <StackLayout Spacing="5">
+                    <Label Text="שם:" FontAttributes="Bold" TextColor="#333"/>
+                    <Label Text="{Binding Name}" FontSize="Medium" TextColor="#555"/>
 
+                    <Label Text="סוג:" FontAttributes="Bold" TextColor="#333"/>
+                    <Label Text="{Binding Kind}" FontSize="Medium" TextColor="#555"/>
 
+                    <Label Text="מספר ביטוח:" FontAttributes="Bold" TextColor="#333"/>
+                    <Label Text="{Binding Insurance}" FontSize="Medium" TextColor="#555"/>
+                </StackLayout>
+            </Frame>
 
-        <Button Text="save" Clicked="Button_Clicked"/>
+            <!-- תאריך טיפול חדש -->
+            <Frame BackgroundColor="White" CornerRadius="15" Padding="15" HasShadow="True">
+                <StackLayout>
+                    <Label Text="תאריך טיפול הבא:" FontAttributes="Bold" TextColor="Green"/>
+                    <Label Text="{Binding Treatment}" FontSize="Medium" TextColor="#555"/>
+                    <DatePicker x:Name="date" DateSelected="Date_DateSelected" Format="D"/>
+                </StackLayout>
+            </Frame>
 
+          
 
-
-
-
-
-    </StackLayout>
+            <!-- כפתור שמירה -->
+            <Button Text="שמור"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    CornerRadius="25"
+                    FontAttributes="Bold"
+                    HeightRequest="50"/>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

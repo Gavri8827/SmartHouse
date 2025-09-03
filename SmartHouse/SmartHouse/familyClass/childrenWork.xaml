@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SmartHouse.familyClass.childrenWork">
+             x:Class="SmartHouse.FamilyClass.ChildrenWork">
 
 
     <ContentPage.ToolbarItems>
@@ -13,38 +13,87 @@
 
     </ContentPage.ToolbarItems>
 
-    <ListView x:Name="childrenList" SeparatorColor="Gray" ItemSelected="childrenList_ItemSelected"
-              ItemTapped="childrenList_ItemTapped">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout Orientation="Horizontal">
-                        <Image Source="{Binding Image}"
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="10" VerticalOptions="Start">
+
+
+            <!-- 1) כותרת בראש העמוד -->
+            <Label 
+     Text="הילדים שלי" 
+     FontSize="24" 
+     FontAttributes="Bold"
+     TextColor="Purple" 
+     HorizontalOptions="Center"
+     HorizontalTextAlignment="Center" />
+
+
+
+            <Label Text="ניתן להוסיף ילדים בלחיצה על הכפתור בסרגל הכלים " FontSize="20" HorizontalOptions="Center" 
+         HorizontalTextAlignment="Center" 
+         VerticalTextAlignment="Center"
+         TextColor="Black"/>
+
+
+            <Label Text="החליקו שמאלה את שם הילד כדי למחוק אותו " FontSize="20" HorizontalOptions="Center" 
+ HorizontalTextAlignment="Center" 
+ VerticalTextAlignment="Center"
+ TextColor="Black"/>
+
+            <Label Text="ניתן להוסיף משימות לביצוע עבור הילד בלחיצה על הכפתור הירוק" FontSize="20" HorizontalOptions="Center" 
+HorizontalTextAlignment="Center" 
+VerticalTextAlignment="Center"
+TextColor="Black"/>
+
+            <Label Text="בלחיצה על שם הילד תעברו לעמוד המשימות של הילד" FontSize="20" HorizontalOptions="Center" 
+HorizontalTextAlignment="Center" 
+VerticalTextAlignment="Center"
+TextColor="Black"/>
+
+            <Label Text="כל ילד יוכל לסמן בעמוד שלו את המשימות שביצע" FontSize="20" HorizontalOptions="Center" 
+HorizontalTextAlignment="Center" 
+VerticalTextAlignment="Center"
+TextColor="Black"/>
+
+
+            <ListView x:Name="childrenList" SeparatorColor="Gray" ItemSelected="ChildrenList_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <SwipeView>
+                                <SwipeView.RightItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="delete"
+                                     BackgroundColor="Red"
+                                     IconImageSource="delete.png"
+                                     Invoked="SwipeItem_delete"/>
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="{Binding Image}"
                                HeightRequest="40"
                                WidthRequest="40"/>
-                        <StackLayout HorizontalOptions="StartAndExpand">
-                            <Label Text="{Binding Name}"
+                                    <StackLayout HorizontalOptions="StartAndExpand">
+                                        <Label Text="{Binding Name}"
                              FontSize="Medium"
                              TextColor="Goldenrod"
                               FontAttributes="Bold"/>
-                        </StackLayout>
+                                    </StackLayout>
 
-                        <StackLayout Orientation="Horizontal" >
-                                <ImageButton Source="add.png" BackgroundColor ="Green" HeightRequest="50" WidthRequest="50" Clicked="ImageWrite_Clicked" CommandParameter="{Binding}" />
-                            
+                                    <StackLayout Orientation="Horizontal" >
+                                        <ImageButton Source="add.png" BackgroundColor ="Green" HeightRequest="50" WidthRequest="50" Clicked="ImageWrite_Clicked" CommandParameter="{Binding}" />
 
-                        </StackLayout>
+                                    </StackLayout>
 
+                                </StackLayout>
 
-                        
+                            </SwipeView>
 
-                    </StackLayout>
-                 
-                   
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
 
-                </ViewCell> 
-            </DataTemplate>
-        </ListView.ItemTemplate>
-        
-    </ListView>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

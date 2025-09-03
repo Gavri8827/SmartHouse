@@ -5,20 +5,22 @@
   xmlns:views="clr-namespace:SmartHouse"
   xmlns:utils="clr-namespace:SmartHouse.UtilitiesClass"
   xmlns:fc="clr-namespace:SmartHouse.FunClass"
-  xmlns:sc="clr-namespace:SmartHouse.shopcClass"
-  xmlns:hc="clr-namespace:SmartHouse.houseCare"
-  xmlns:fm="clr-namespace:SmartHouse.familyClass"
+  xmlns:sc="clr-namespace:SmartHouse.ShopClass"
+  xmlns:hc="clr-namespace:SmartHouse.HouseCare"
+  xmlns:fm="clr-namespace:SmartHouse.FamilyClass"
+  xmlns:user="clr-namespace:SmartHouse.user"
   x:Class="SmartHouse.AppShell"
   BackgroundColor="#FF6A00"
   TitleColor="White"
   ForegroundColor="White">
 
 
-        <!-- 1) Your HomePage, showing your original grid page: -->
-    <ShellItem Route="home" Shell.FlyoutBehavior="Disabled">
-        <ShellContent ContentTemplate="{DataTemplate views:MainPage}" />
-    </ShellItem> 
-    
- 
+    <ShellItem Route="login" Shell.FlyoutBehavior="Disabled">
+        <ShellContent ContentTemplate="{DataTemplate user:Connect}" />
+    </ShellItem>
+
+
+
+
 
 </Shell>

@@ -1,37 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SmartHouse.familyClass.childrenTaskInfo"
+             x:Class="SmartHouse.FamilyClass.ChildrenTaskInfo"
              Title="{Binding Name}">
 
     <StackLayout Margin="20">
         <Image Source="{Binding Image}"/>
-        <Label Text="{Binding Name}" FontSize="Large" TextColor="Silver"/>
-       
-        <ListView ItemsSource="{Binding Tasks}">
+        <Label Text="{Binding Name}" FontSize="Large" TextColor="Silver" x:Name="name"/>
+
+
+        <Label 
+Text="{Binding Name, StringFormat='המשימות של {0}'}"
+FontSize="24" 
+FontAttributes="Bold"
+TextColor="Purple" 
+HorizontalOptions="Center"
+HorizontalTextAlignment="Center" />
+        <ListView  x:Name="ChildrenTaskList">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <SwipeView>
-                            <SwipeView.RightItems>
-                                <SwipeItems>
-                                    <SwipeItem Text="delete"
-                                               BackgroundColor="Red"
-                                               IconImageSource="delete.png"
-                                               Invoked="SwipeItem_Invoked"/>
-                                    <SwipeItem Text="Edit"
-                                               BackgroundColor="Green"
-                                               IconImageSource="add.png"
-                                               Invoked="SwipeItem_Invoked_1"/>
 
-                                </SwipeItems>
-                            </SwipeView.RightItems>
+                            <!-- מסתירים רק את כפתורי הסווייפ -->
+                            <!--
+                    <SwipeView.RightItems>
+                        <SwipeItems>
+                            <SwipeItem Text="delete"
+                                       BackgroundColor="Red"
+                                       IconImageSource="delete.png"
+                                       Invoked="SwipeItem_delete" />
+                            <SwipeItem Text="Edit"
+                                       BackgroundColor="Green"
+                                       IconImageSource="add.png"
+                                       Invoked="SwipeItem_Invoked_1" />
+                        </SwipeItems>
+                    </SwipeView.RightItems>
+                    -->
+
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="{Binding Description}"/>
-                                <CheckBox IsChecked="{Binding IsDone}" HorizontalOptions="EndAndExpand" />
+                                <CheckBox IsChecked="{Binding IsDone}" HorizontalOptions="EndAndExpand" CheckedChanged="CheckBox_isDone" />
                             </StackLayout>
                         </SwipeView>
-                        
+
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

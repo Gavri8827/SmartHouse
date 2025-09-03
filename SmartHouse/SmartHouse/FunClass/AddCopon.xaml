@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.FunClass.AddCopon"
+             Title="הוספת קופון">
+
+    <StackLayout Padding="20" Spacing="15">
+
+
+        <Entry
+            x:Name="nameEntry"
+            Placeholder="שם הקופון"
+            Keyboard="Text" />
+
+        <!-- 1) Entry עבור coponNumber (מספר קופון) -->
+        <Entry
+            x:Name="coponNumberEntry"
+            Placeholder="מספר קופון (מספר שלם)"
+            Keyboard="Numeric" />
+
+        <!-- 2) Entry עבור סכום למימוש (MoneyAmount) -->
+        <Entry
+            x:Name="amountEntry"
+            Placeholder="סכום למימוש (₪)"
+            Keyboard="Numeric" />
+
+        <!-- 3) Entry עבור Type (כעת מהסוג טקסט חופשי) -->
+        <Entry
+            x:Name="typeEntry"
+            Placeholder="סוג קופון: (תו הזהב/נופשונית/BuyMe)"
+            Keyboard="Text" />
+
+        <!-- 4) DatePicker עבור ExpirationDate -->
+        <DatePicker
+            x:Name="expirationPicker"
+            Format="dd/MM/yyyy"/>
+
+
+        <Button Text="שמור" Clicked="OnSaveClicked" />
+    </StackLayout>
+</ContentPage>

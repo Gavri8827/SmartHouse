@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.FunClass.PrivateCoponInfo"
+             Title="{Binding coponName}">
+    <StackLayout Margin="20" Spacing="15">
+
+        <!-- 1) הצגת coponName בתור כותרת ראשית בתוך העמוד -->
+        <Label
+                Text="שם הקופון:"
+                FontAttributes="Bold"
+                FontSize="Medium"
+            TextColor="Pink"/>
+        <Label
+                Text="{Binding coponName}"
+                FontSize="Large"
+                TextColor="Black" />
+
+        <!-- 2) הצגת coponNumber (מספר הקופון כפי שמוזן על־ידי המשתמש) -->
+        <Label 
+                Text="מספר קופון :"
+                FontAttributes="Bold"
+            TextColor="Pink"
+                FontSize="Medium"
+                Margin="0,10,0,0" />
+        <Label 
+                Text="{Binding coponNumber}"
+                FontSize="Large"
+                TextColor="Silver" />
+
+        <!-- 3) הצגת סכום למימוש (MoneyAmount) -->
+        <Label 
+                Text="סכום למימוש:"
+                FontAttributes="Bold"
+                FontSize="Medium"
+            TextColor="Pink"
+                Margin="0,10,0,0" />
+        <Label 
+                Text="{Binding MoneyAmount, StringFormat='₪{0:F2}'}"
+                FontSize="Large"
+                TextColor="Silver" />
+
+        <!-- 4) הצגת סוג הקופון (Type) -->
+        <Label 
+                Text="סוג הקופון:"
+                FontAttributes="Bold"
+                FontSize="Medium"
+            TextColor="Pink"
+                Margin="0,10,0,0" />
+        <Label 
+                Text="{Binding Type}"
+                FontSize="Large"
+                TextColor="Silver" />
+
+        <!-- 5) הצגת תאריך התפוגה (ExpirationDate) -->
+        <Label 
+                Text="תאריך תפוגה:"
+                FontAttributes="Bold"
+            TextColor="Pink"
+                FontSize="Medium"
+                Margin="0,10,0,0" />
+        <Label 
+                Text="{Binding ExpirationDate, StringFormat='{0:dd/MM/yyyy}'}"
+                FontSize="Large"
+                TextColor="Silver" />
+        <!--<ListView  x:Name="ChildrenTaskList">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                       
+                            <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding MoneyAmount}"/>
+                            <Label Text="{Binding ExpirationDate }"/>
+                        </StackLayout>
+                       
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->
+
+
+
+
+    </StackLayout>
+</ContentPage>
+    
+    

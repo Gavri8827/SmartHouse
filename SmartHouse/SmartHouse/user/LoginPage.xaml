@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.user.LoginPage"
+             Title="צור קבוצה חדשה">
+    <ScrollView>
+        <StackLayout x:Name="MainStack" Padding="20" Spacing="20">
+
+            <Label Text="צור קבוצה חדשה" FontSize="Large" HorizontalOptions="Center" />
+
+            <Entry x:Name="GroupIdEntry" Placeholder="מזהה קבוצה" />
+            <Entry x:Name="GroupPasswordEntry" Placeholder="סיסמת קבוצה" IsPassword="True" />
+
+            <Label Text="משתמשים בקבוצה" FontAttributes="Bold" />
+
+            <StackLayout x:Name="UsersStack" Spacing="10" />
+
+            <Button Text="➕ הוסף משתמש" Clicked="OnAddUserClicked" BackgroundColor="#e0e0e0" TextColor="Black"/>
+
+            <Button Text="✅ צור קבוצה" Clicked="OnCreateGroupClicked" BackgroundColor="#2196F3" TextColor="White"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

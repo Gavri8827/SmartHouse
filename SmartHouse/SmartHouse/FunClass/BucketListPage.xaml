@@ -3,49 +3,89 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SmartHouse.FunClass.BucketListPage">
 
-    <StackLayout>
-        <CarouselView x:Name="myView">
-            <CarouselView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout>
-                        <Frame HasShadow="True"
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="add" IconImageSource="add.png" Clicked="ToolbarItem_Clicked"
+                 Order="Primary"
+                 Priority="0" />
+
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="15">
+            <Label 
+     Text="רעיונות לבילוי" 
+     FontSize="24" 
+     FontAttributes="Bold"
+     TextColor="Pink" 
+     HorizontalOptions="Center"
+     HorizontalTextAlignment="Center" />
+
+
+            <Label Text="ניתן להוסיף רעיון לבילוי בלחיצה על הכפתור בסרגל הכלים " FontSize="20" HorizontalOptions="Center" 
+         HorizontalTextAlignment="Center" 
+         VerticalTextAlignment="Center"
+         TextColor="Black"/>
+
+            <Label Text="במסך שנפתח הקלידו את הרעיון ולאחר מכן בחרו תמונה מתאימה מהגלריה שלכם " FontSize="20" HorizontalOptions="Center" 
+     HorizontalTextAlignment="Center" 
+     VerticalTextAlignment="Center"
+     TextColor="Black"/>
+
+            <Label Text="אחרי שהגשמתם את הרעיון תוכלו לסמן שביצעתם אותו והוא יימחק מהרשימה! " FontSize="20" HorizontalOptions="Center" 
+     HorizontalTextAlignment="Center" 
+     VerticalTextAlignment="Center"
+     TextColor="Black"/>
+
+            <Label Text="למעבר בין הרעיונות החליקו" FontSize="20" HorizontalOptions="Center" 
+ HorizontalTextAlignment="Center" 
+ VerticalTextAlignment="Center"
+ TextColor="Black"/>
+
+            <CarouselView x:Name="bucketListItems">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Frame HasShadow="True"
                                BorderColor="DimGray"
                                CornerRadius="5"
                                Margin="20"
                                HeightRequest="300"
                                HorizontalOptions="Center"
                                VerticalOptions="CenterAndExpand">
-                            <StackLayout>
-                                <Label Text="{Binding Description}"
+                                <StackLayout>
+                                    <Label Text="{Binding Description}"
                                        FontSize="Large"
                                        FontAttributes="Bold"
                                        HorizontalTextAlignment="Center"
                                        VerticalTextAlignment="Center"/>
-                                <Image Source="{Binding FunImage}"
-                                       x:Name ="Image22"
+                                    <ImageButton Source="{Binding FunImage}"
+                                       x:Name ="fumImage"
                                        Aspect="AspectFill"
                                        HeightRequest="200"
                                        WidthRequest="200"
                                        HorizontalOptions="Center"/>
-                                <CheckBox IsChecked="{Binding IsDone}" HorizontalOptions="Center" />
+                                    <CheckBox IsChecked="{Binding IsDone}" HorizontalOptions="Center" CheckedChanged="CheckBox_CheckedChanged" />
 
-                            </StackLayout>
-                            
-                            
-                            
-                            
-                        </Frame>
-                        
-                        
-                        
-                    </StackLayout>
-                    
-                    
-                </DataTemplate>
-                
-            </CarouselView.ItemTemplate>
-            
-        </CarouselView>
-        
-    </StackLayout>
+                                </StackLayout>
+
+
+
+
+                            </Frame>
+
+
+
+                        </StackLayout>
+
+
+                    </DataTemplate>
+
+                </CarouselView.ItemTemplate>
+
+            </CarouselView>
+
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

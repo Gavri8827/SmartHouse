@@ -6,13 +6,19 @@ using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using SmartHouse.Firebase;
+using SmartHouse.UtilitiesClass.Account;
+using static System.Net.Mime.MediaTypeNames;
+using AccountModel = SmartHouse.UtilitiesClass.Account.Account;
+
 
 namespace SmartHouse.UtilitiesClass
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class InsertUtilityInfo : ContentPage
 	{
-		public InsertUtilityInfo ()
+        private FirebaseHelper firebaseHelper = new FirebaseHelper();
+        public InsertUtilityInfo ()
 		{
 			InitializeComponent ();
 		}
@@ -22,20 +28,33 @@ namespace SmartHouse.UtilitiesClass
             var gasConsumerNumber = GasConsumerEntry.Text?.Trim();
             var gasCompany = GasCompanyPicker.SelectedItem as string;
 
-            Application.Current.Properties["ElectricityAccount"] = elctricityNumberOcount.Text;
-            Application.Current.Properties["ElectricityPhone"] = elctricityNumberPhone.Text;
+            // יצירת מופע של Acount
+            var account = new AccountModel
+            {
+                Electricity = elctricityNumberPhone.Text?.Trim(),
+                ElectricityNumber = elctricityNumberOcount.Text?.Trim(),
 
-            Application.Current.Properties["WaterAccount"] = WaterNumberOcount.Text;
-            Application.Current.Properties["WaterPhone"] = WaterNumberPhone.Text;
+                Water = WaterNumberPhone.Text?.Trim(),
+                WaterNumber = WaterNumberOcount.Text?.Trim(),
 
-            // שמירה ב-Application.Properties
-            Application.Current.Properties["GasAccount"] = gasConsumerNumber;
-            Application.Current.Properties["GasCompany"] = gasCompany;
-            Application.Current.Properties["GasPhone"] = GasNumberPhone.Text;
+                GasCompany = gasCompany,
+                GasNumber = gasConsumerNumber,
+                GasPhoneNumber = GasNumberPhone.Text?.Trim(),
+                GasPayment = 0,  
+                WaterPayment = 0,
+                ElectricityPayment = 0
+            };
 
-            // שמירת הנתונים כך שלא יימחקו
-            await Application.Current.SavePropertiesAsync();
-            await DisplayAlert("הצלחה", "הנתונים נשמרו בהצלחה!", "אישור");
+            // שליחה ל-Firebase
+            try
+            {
+                await firebaseHelper.CreateUtilitiesList(account);
+                await DisplayAlert("הצלחה", "הנתונים נשמרו בהצלחה ב־Firebase!", "אישור");
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("שגיאה", $"אירעה שגיאה: {ex.Message}", "אישור");
+            }
 
         }
     }

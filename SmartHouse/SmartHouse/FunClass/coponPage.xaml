@@ -1,38 +1,75 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SmartHouse.FunClass.coponPage"
-             Title="Copon List">
-    <ListView x:Name="CoponList" SeparatorColor="Gray">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="{Binding Name}" FontSize="Medium" VerticalOptions="Center" TextColor="BurlyWood"/>
-                        <Label Text="{Binding Type}" FontSize="Medium" VerticalOptions="Center" TextColor="BurlyWood"/>
-                    </StackLayout>
-
-
-
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-        
-        
-
-    </ListView>
+             x:Class="SmartHouse.FunClass.CoponPage"
+             Title="רשימת קופונים">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="insert"
-               Clicked="ToolbarItem_Clicked"
-               IconImageSource="insert.png"
-               Priority="2"
-               Order="Primary"/>
-       
-
-
-
-
+        <ToolbarItem Text="הוספת קופון"
+           Clicked="ToolbarItem_Clicked"
+           IconImageSource="insert.png"
+           Priority="2"
+           Order="Primary"/>
     </ContentPage.ToolbarItems>
 
+    <StackLayout Padding="20" Spacing="10" VerticalOptions="Start">
+
+        <!-- 1) כותרת בראש העמוד -->
+        <Label 
+            Text="הקופונים שלי" 
+            FontSize="24" 
+            FontAttributes="Bold"
+            TextColor="#FCA3B7" 
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center" />
+        <Label Text="ניתן להוסיף קופון בלחיצה על הכפתור בסרגל הכלים " FontSize="20" HorizontalOptions="Center" 
+                HorizontalTextAlignment="Center" 
+                VerticalTextAlignment="Center"
+                TextColor="Black"/>
+
+        <Label Text="לצפייה בפרטי הקופון לחצו עליו " FontSize="20" HorizontalOptions="Center" 
+        HorizontalTextAlignment="Center" 
+        VerticalTextAlignment="Center"
+        TextColor="Black"/>
+
+        <Label Text="החליקו שמאלה את כותרת הקופון כדי למחוק אותו או לערוך אותו" FontSize="20" HorizontalOptions="Center" 
+        HorizontalTextAlignment="Center" 
+        VerticalTextAlignment="Center"
+        TextColor="Black"/>
+
+        <ListView x:Name="CoponList" SeparatorColor="Gray" ItemSelected="CoponList_ItemSelected" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItem Text="delete"
+                       BackgroundColor="Red"
+                       IconImageSource="delete.png"
+                       Invoked="SwipeItem_Invoked"/>
+                                    <SwipeItem Text="Edit"
+                       BackgroundColor="Green"
+                       IconImageSource="add.png"
+                       Invoked="SwipeItem_Invoked_1"/>
+
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Type}" FontSize="Medium" VerticalOptions="Center" FontAttributes="Bold" TextColor="#FCA3B7 "/>
+                                <Label Text="{Binding MoneyAmount, StringFormat=' ₪{0:F2}'}" FontSize="Medium"  VerticalOptions="Center" TextColor="Black"/>
+                            </StackLayout>
+
+
+                        </SwipeView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+
+
+        </ListView>
+
+
+    </StackLayout>
 </ContentPage>

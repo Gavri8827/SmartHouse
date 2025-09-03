@@ -13,6 +13,8 @@
 
   <ItemGroup>
     <None Remove="images\backgroundgray.jpg" />
+    <None Remove="images\cats.jpg" />
+    <None Remove="images\children.JPG" />
     <None Remove="images\childrenWork.png" />
     <None Remove="images\pet.png" />
     <None Remove="images\professional.jpg" />
@@ -22,6 +24,8 @@
 
   <ItemGroup>
     <EmbeddedResource Include="images\backgroundgray.jpg" />
+    <EmbeddedResource Include="images\cats.jpg" />
+    <EmbeddedResource Include="images\children.JPG" />
     <EmbeddedResource Include="images\childrenWork.png" />
     <EmbeddedResource Include="images\professional.jpg" />
     <EmbeddedResource Include="images\RegularMaintenance.jpg" />
@@ -30,9 +34,15 @@
 
   <ItemGroup>
     <PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
+    <PackageReference Include="Xam.Plugin.Media" Version="6.0.2" />
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FirebaseDatabase.net" Version="4.6.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,43 +53,67 @@
     <Compile Update="AppShell.xaml.cs">
       <DependentUpon>AppShell.xaml</DependentUpon>
     </Compile>
-    <Compile Update="About.xaml.cs">
-      <DependentUpon>About.xaml</DependentUpon>
+    <Compile Update="FamilyClass\childrenTaskInfo.xaml.cs">
+      <DependentUpon>ChildrenTaskInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="FamilyClass\childrenWork.xaml.cs">
+      <DependentUpon>ChildrenWork.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="FamilyClass\family.xaml.cs">
+      <DependentUpon>Family.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="FunClass\coponPage.xaml.cs">
+      <DependentUpon>CoponPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="UtilitiesClass\electricity.xaml.cs">
-      <DependentUpon>electricity.xaml</DependentUpon>
+      <DependentUpon>Electricity.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="UtilitiesClass\gas.xaml.cs">
+      <DependentUpon>Gas.xaml</DependentUpon>
     </Compile>
     <Compile Update="UtilitiesClass\UtilitiesMainPage.xaml.cs">
       <DependentUpon>UtilitiesMainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="UtilitiesClass\water.xaml.cs">
+      <DependentUpon>Water.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="familyClass\childrenTaskInfo.xaml">
+    <EmbeddedResource Update="FamilyClass\ChildrenTaskInfo.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="familyClass\childrenWork.xaml">
+    <EmbeddedResource Update="FamilyClass\ChildrenWork.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="familyClass\family.xaml">
+    <EmbeddedResource Update="FamilyClass\EditPet.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="familyClass\Pet.xaml">
+    <EmbeddedResource Update="FamilyClass\Family.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="familyClass\PetInfoPage.xaml">
+    <EmbeddedResource Update="FamilyClass\Pet.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="About.xaml">
+    <EmbeddedResource Update="FamilyClass\PetInfoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="UtilitiesClass\financial.xaml">
+    <EmbeddedResource Update="FunClass\PrivateCoponInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="user\Connect.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="user\ConnectPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="user\LoginPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="FunClass\BucketListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="FunClass\coponPage.xaml">
+    <EmbeddedResource Update="FunClass\CoponPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="FunClass\FamilyTimePage.xaml">
@@ -91,13 +125,13 @@
     <EmbeddedResource Update="FunClass\VactionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="houseCare\HouseCareMainPage.xaml">
+    <EmbeddedResource Update="HouseCare\HouseCareMainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="houseCare\Maintence.xaml">
+    <EmbeddedResource Update="HouseCare\Maintence.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="houseCare\ProfessionalPage.xaml">
+    <EmbeddedResource Update="HouseCare\ProfessionalPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="UtilitiesClass\InsertUtilityInfo.xaml">
@@ -106,10 +140,13 @@
     <EmbeddedResource Update="AppShell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="shopcClass\InsertShopItem.xaml">
+    <EmbeddedResource Update="ShopClass\InsertShopItem.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="shopcClass\ShopListPage.xaml">
+    <EmbeddedResource Update="ShopClass\ShopListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="UtilitiesClass\PaymentHistoryPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="UtilitiesClass\PaymentReportPage.xaml">

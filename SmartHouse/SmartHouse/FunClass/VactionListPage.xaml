@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.FunClass.VactionListPage"  Title="תכנון חופשה">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add more Vaction"
+             IconImageSource="add.png"
+             Priority="0"
+             Order="Primary"
+             Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="10" VerticalOptions="Start">
+
+
+            <!-- 1) כותרת בראש העמוד -->
+            <Label 
+        Text="החופשות שלי" 
+        FontSize="24" 
+        FontAttributes="Bold"
+        TextColor="#FCA3B7" 
+        HorizontalOptions="Center"
+        HorizontalTextAlignment="Center" />
+
+            <Image Source="vacation.jpg"
+   WidthRequest="220"
+   HeightRequest="220"
+   Aspect="AspectFit"
+   HorizontalOptions="Center"
+   VerticalOptions="Center" />
+
+            <Label Text="ניתן להוסיף חופשה בלחיצה על הכפתור בסרגל הכלים " FontSize="20" HorizontalOptions="Center" 
+            HorizontalTextAlignment="Center" 
+            VerticalTextAlignment="Center"
+            TextColor="Black"/>
+
+            <Label Text="לצפייה/עריכת פרטי החופשה לחצו עליה " FontSize="20" HorizontalOptions="Center" 
+    HorizontalTextAlignment="Center" 
+    VerticalTextAlignment="Center"
+    TextColor="Black"/>
+
+
+
+
+            <ListView x:Name="vacationListView" HasUnevenRows="True"
+                      ItemTapped="VacationListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding Destination}" FontAttributes="Bold" TextColor="#FCA3B7" FontSize="Medium" />
+                                <Label Text="{Binding StartDate, StringFormat='מ: {0:dd/MM/yyyy}'}" TextColor="Black"/>
+                                <Label Text="{Binding EndDate, StringFormat='עד: {0:dd/MM/yyyy}'}" TextColor="Black"/>
+                                <Label Text="{Binding Notes}" FontAttributes="Italic" FontSize="Small" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    
+    

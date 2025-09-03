@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using SmartHouse.houseCare.professional;
+using SmartHouse.HouseCare.Professional;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 
-namespace SmartHouse.houseCare
+namespace SmartHouse.HouseCare
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Maintence : ContentPage

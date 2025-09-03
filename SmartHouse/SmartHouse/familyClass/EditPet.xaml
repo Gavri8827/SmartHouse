@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.FamilyClass.EditPet"
+             Title="עריכת חיית מחמד"
+             BackgroundColor="#f5f5f5">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+
+            <!-- שדה שם -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="15"
+                   Padding="10"
+                   HasShadow="True">
+                <StackLayout>
+                    <Label Text="שם:" FontAttributes="Bold" TextColor="#333" />
+                    <Entry x:Name="EditPetName"
+                           Placeholder="שם החיה"
+                           FontSize="Medium"
+                           TextColor="#000" />
+                </StackLayout>
+            </Frame>
+
+            <!-- סוג חיה -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="15"
+                   Padding="10"
+                   HasShadow="True">
+                <StackLayout>
+                    <Label Text="סוג:" FontAttributes="Bold" TextColor="#333" />
+                    <Entry x:Name="PetKind"
+                           Placeholder="סוג החיה"
+                           FontSize="Medium"
+                           TextColor="#000" />
+                </StackLayout>
+            </Frame>
+
+            <!-- מספר ביטוח -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="15"
+                   Padding="10"
+                   HasShadow="True">
+                <StackLayout>
+                    <Label Text="מספר ביטוח:" FontAttributes="Bold" TextColor="#333" />
+                    <Entry x:Name="PetInsurance"
+                           Placeholder="מספר ביטוח"
+                           Keyboard="Numeric"
+                           FontSize="Medium"
+                           TextColor="#000" />
+                </StackLayout>
+            </Frame>
+
+            <!-- תאריך טיפול הבא -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="15"
+                   Padding="10"
+                   HasShadow="True">
+                <StackLayout>
+                    <Label Text="תאריך טיפול הבא:" FontAttributes="Bold" TextColor="#333" />
+                    <DatePicker x:Name="TreatmentDate" />
+                </StackLayout>
+            </Frame>
+
+            <!-- כפתור שמירה -->
+            <Button Text="שמור"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    CornerRadius="25"
+                    FontAttributes="Bold"
+                    HeightRequest="50" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

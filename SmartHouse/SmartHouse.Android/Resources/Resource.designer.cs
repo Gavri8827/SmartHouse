@@ -25,6 +25,210 @@ namespace SmartHouse.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Plugin.Media.Resource.Attribute.alpha = global::SmartHouse.Droid.Resource.Attribute.alpha;
+			global::Plugin.Media.Resource.Attribute.font = global::SmartHouse.Droid.Resource.Attribute.font;
+			global::Plugin.Media.Resource.Attribute.fontProviderAuthority = global::SmartHouse.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Plugin.Media.Resource.Attribute.fontProviderCerts = global::SmartHouse.Droid.Resource.Attribute.fontProviderCerts;
+			global::Plugin.Media.Resource.Attribute.fontProviderFetchStrategy = global::SmartHouse.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Plugin.Media.Resource.Attribute.fontProviderFetchTimeout = global::SmartHouse.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Plugin.Media.Resource.Attribute.fontProviderPackage = global::SmartHouse.Droid.Resource.Attribute.fontProviderPackage;
+			global::Plugin.Media.Resource.Attribute.fontProviderQuery = global::SmartHouse.Droid.Resource.Attribute.fontProviderQuery;
+			global::Plugin.Media.Resource.Attribute.fontProviderSystemFontFamily = global::SmartHouse.Droid.Resource.Attribute.fontProviderSystemFontFamily;
+			global::Plugin.Media.Resource.Attribute.fontStyle = global::SmartHouse.Droid.Resource.Attribute.fontStyle;
+			global::Plugin.Media.Resource.Attribute.fontVariationSettings = global::SmartHouse.Droid.Resource.Attribute.fontVariationSettings;
+			global::Plugin.Media.Resource.Attribute.fontWeight = global::SmartHouse.Droid.Resource.Attribute.fontWeight;
+			global::Plugin.Media.Resource.Attribute.nestedScrollViewStyle = global::SmartHouse.Droid.Resource.Attribute.nestedScrollViewStyle;
+			global::Plugin.Media.Resource.Attribute.queryPatterns = global::SmartHouse.Droid.Resource.Attribute.queryPatterns;
+			global::Plugin.Media.Resource.Attribute.shortcutMatchRequired = global::SmartHouse.Droid.Resource.Attribute.shortcutMatchRequired;
+			global::Plugin.Media.Resource.Attribute.ttcIndex = global::SmartHouse.Droid.Resource.Attribute.ttcIndex;
+			global::Plugin.Media.Resource.Color.androidx_core_ripple_material_light = global::SmartHouse.Droid.Resource.Color.androidx_core_ripple_material_light;
+			global::Plugin.Media.Resource.Color.androidx_core_secondary_text_default_material_light = global::SmartHouse.Droid.Resource.Color.androidx_core_secondary_text_default_material_light;
+			global::Plugin.Media.Resource.Color.browser_actions_bg_grey = global::SmartHouse.Droid.Resource.Color.browser_actions_bg_grey;
+			global::Plugin.Media.Resource.Color.browser_actions_divider_color = global::SmartHouse.Droid.Resource.Color.browser_actions_divider_color;
+			global::Plugin.Media.Resource.Color.browser_actions_text_color = global::SmartHouse.Droid.Resource.Color.browser_actions_text_color;
+			global::Plugin.Media.Resource.Color.browser_actions_title_color = global::SmartHouse.Droid.Resource.Color.browser_actions_title_color;
+			global::Plugin.Media.Resource.Color.notification_action_color_filter = global::SmartHouse.Droid.Resource.Color.notification_action_color_filter;
+			global::Plugin.Media.Resource.Color.notification_icon_bg_color = global::SmartHouse.Droid.Resource.Color.notification_icon_bg_color;
+			global::Plugin.Media.Resource.Dimension.browser_actions_context_menu_max_width = global::SmartHouse.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::Plugin.Media.Resource.Dimension.browser_actions_context_menu_min_padding = global::SmartHouse.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::Plugin.Media.Resource.Dimension.compat_button_inset_horizontal_material = global::SmartHouse.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Plugin.Media.Resource.Dimension.compat_button_inset_vertical_material = global::SmartHouse.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Plugin.Media.Resource.Dimension.compat_button_padding_horizontal_material = global::SmartHouse.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Plugin.Media.Resource.Dimension.compat_button_padding_vertical_material = global::SmartHouse.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Plugin.Media.Resource.Dimension.compat_control_corner_material = global::SmartHouse.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Plugin.Media.Resource.Dimension.compat_notification_large_icon_max_height = global::SmartHouse.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Plugin.Media.Resource.Dimension.compat_notification_large_icon_max_width = global::SmartHouse.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Plugin.Media.Resource.Dimension.notification_action_icon_size = global::SmartHouse.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Plugin.Media.Resource.Dimension.notification_action_text_size = global::SmartHouse.Droid.Resource.Dimension.notification_action_text_size;
+			global::Plugin.Media.Resource.Dimension.notification_big_circle_margin = global::SmartHouse.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Plugin.Media.Resource.Dimension.notification_content_margin_start = global::SmartHouse.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Plugin.Media.Resource.Dimension.notification_large_icon_height = global::SmartHouse.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Plugin.Media.Resource.Dimension.notification_large_icon_width = global::SmartHouse.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Plugin.Media.Resource.Dimension.notification_main_column_padding_top = global::SmartHouse.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Plugin.Media.Resource.Dimension.notification_media_narrow_margin = global::SmartHouse.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Plugin.Media.Resource.Dimension.notification_right_icon_size = global::SmartHouse.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Plugin.Media.Resource.Dimension.notification_right_side_padding_top = global::SmartHouse.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Plugin.Media.Resource.Dimension.notification_small_icon_background_padding = global::SmartHouse.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Plugin.Media.Resource.Dimension.notification_small_icon_size_as_large = global::SmartHouse.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Plugin.Media.Resource.Dimension.notification_subtext_size = global::SmartHouse.Droid.Resource.Dimension.notification_subtext_size;
+			global::Plugin.Media.Resource.Dimension.notification_top_pad = global::SmartHouse.Droid.Resource.Dimension.notification_top_pad;
+			global::Plugin.Media.Resource.Dimension.notification_top_pad_large_text = global::SmartHouse.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Plugin.Media.Resource.Drawable.notification_action_background = global::SmartHouse.Droid.Resource.Drawable.notification_action_background;
+			global::Plugin.Media.Resource.Drawable.notification_bg = global::SmartHouse.Droid.Resource.Drawable.notification_bg;
+			global::Plugin.Media.Resource.Drawable.notification_bg_low = global::SmartHouse.Droid.Resource.Drawable.notification_bg_low;
+			global::Plugin.Media.Resource.Drawable.notification_bg_low_normal = global::SmartHouse.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Plugin.Media.Resource.Drawable.notification_bg_low_pressed = global::SmartHouse.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Plugin.Media.Resource.Drawable.notification_bg_normal = global::SmartHouse.Droid.Resource.Drawable.notification_bg_normal;
+			global::Plugin.Media.Resource.Drawable.notification_bg_normal_pressed = global::SmartHouse.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Plugin.Media.Resource.Drawable.notification_icon_background = global::SmartHouse.Droid.Resource.Drawable.notification_icon_background;
+			global::Plugin.Media.Resource.Drawable.notification_template_icon_bg = global::SmartHouse.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Plugin.Media.Resource.Drawable.notification_template_icon_low_bg = global::SmartHouse.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Plugin.Media.Resource.Drawable.notification_tile_bg = global::SmartHouse.Droid.Resource.Drawable.notification_tile_bg;
+			global::Plugin.Media.Resource.Drawable.notify_panel_notification_icon_bg = global::SmartHouse.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Plugin.Media.Resource.Id.accessibility_action_clickable_span = global::SmartHouse.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_0 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_0;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_1 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_1;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_10 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_10;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_11 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_11;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_12 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_12;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_13 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_13;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_14 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_14;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_15 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_15;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_16 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_16;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_17 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_17;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_18 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_18;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_19 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_19;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_2 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_2;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_20 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_20;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_21 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_21;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_22 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_22;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_23 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_23;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_24 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_24;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_25 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_25;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_26 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_26;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_27 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_27;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_28 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_28;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_29 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_29;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_3 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_3;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_30 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_30;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_31 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_31;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_4 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_4;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_5 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_5;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_6 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_6;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_7 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_7;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_8 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_8;
+			global::Plugin.Media.Resource.Id.accessibility_custom_action_9 = global::SmartHouse.Droid.Resource.Id.accessibility_custom_action_9;
+			global::Plugin.Media.Resource.Id.actions = global::SmartHouse.Droid.Resource.Id.actions;
+			global::Plugin.Media.Resource.Id.action_container = global::SmartHouse.Droid.Resource.Id.action_container;
+			global::Plugin.Media.Resource.Id.action_divider = global::SmartHouse.Droid.Resource.Id.action_divider;
+			global::Plugin.Media.Resource.Id.action_image = global::SmartHouse.Droid.Resource.Id.action_image;
+			global::Plugin.Media.Resource.Id.action_text = global::SmartHouse.Droid.Resource.Id.action_text;
+			global::Plugin.Media.Resource.Id.async = global::SmartHouse.Droid.Resource.Id.async;
+			global::Plugin.Media.Resource.Id.blocking = global::SmartHouse.Droid.Resource.Id.blocking;
+			global::Plugin.Media.Resource.Id.browser_actions_header_text = global::SmartHouse.Droid.Resource.Id.browser_actions_header_text;
+			global::Plugin.Media.Resource.Id.browser_actions_menu_items = global::SmartHouse.Droid.Resource.Id.browser_actions_menu_items;
+			global::Plugin.Media.Resource.Id.browser_actions_menu_item_icon = global::SmartHouse.Droid.Resource.Id.browser_actions_menu_item_icon;
+			global::Plugin.Media.Resource.Id.browser_actions_menu_item_text = global::SmartHouse.Droid.Resource.Id.browser_actions_menu_item_text;
+			global::Plugin.Media.Resource.Id.browser_actions_menu_view = global::SmartHouse.Droid.Resource.Id.browser_actions_menu_view;
+			global::Plugin.Media.Resource.Id.chronometer = global::SmartHouse.Droid.Resource.Id.chronometer;
+			global::Plugin.Media.Resource.Id.dialog_button = global::SmartHouse.Droid.Resource.Id.dialog_button;
+			global::Plugin.Media.Resource.Id.forever = global::SmartHouse.Droid.Resource.Id.forever;
+			global::Plugin.Media.Resource.Id.icon = global::SmartHouse.Droid.Resource.Id.icon;
+			global::Plugin.Media.Resource.Id.icon_group = global::SmartHouse.Droid.Resource.Id.icon_group;
+			global::Plugin.Media.Resource.Id.info = global::SmartHouse.Droid.Resource.Id.info;
+			global::Plugin.Media.Resource.Id.italic = global::SmartHouse.Droid.Resource.Id.italic;
+			global::Plugin.Media.Resource.Id.line1 = global::SmartHouse.Droid.Resource.Id.line1;
+			global::Plugin.Media.Resource.Id.line3 = global::SmartHouse.Droid.Resource.Id.line3;
+			global::Plugin.Media.Resource.Id.normal = global::SmartHouse.Droid.Resource.Id.normal;
+			global::Plugin.Media.Resource.Id.notification_background = global::SmartHouse.Droid.Resource.Id.notification_background;
+			global::Plugin.Media.Resource.Id.notification_main_column = global::SmartHouse.Droid.Resource.Id.notification_main_column;
+			global::Plugin.Media.Resource.Id.notification_main_column_container = global::SmartHouse.Droid.Resource.Id.notification_main_column_container;
+			global::Plugin.Media.Resource.Id.right_icon = global::SmartHouse.Droid.Resource.Id.right_icon;
+			global::Plugin.Media.Resource.Id.right_side = global::SmartHouse.Droid.Resource.Id.right_side;
+			global::Plugin.Media.Resource.Id.tag_accessibility_actions = global::SmartHouse.Droid.Resource.Id.tag_accessibility_actions;
+			global::Plugin.Media.Resource.Id.tag_accessibility_clickable_spans = global::SmartHouse.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::Plugin.Media.Resource.Id.tag_accessibility_heading = global::SmartHouse.Droid.Resource.Id.tag_accessibility_heading;
+			global::Plugin.Media.Resource.Id.tag_accessibility_pane_title = global::SmartHouse.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::Plugin.Media.Resource.Id.tag_on_apply_window_listener = global::SmartHouse.Droid.Resource.Id.tag_on_apply_window_listener;
+			global::Plugin.Media.Resource.Id.tag_on_receive_content_listener = global::SmartHouse.Droid.Resource.Id.tag_on_receive_content_listener;
+			global::Plugin.Media.Resource.Id.tag_on_receive_content_mime_types = global::SmartHouse.Droid.Resource.Id.tag_on_receive_content_mime_types;
+			global::Plugin.Media.Resource.Id.tag_screen_reader_focusable = global::SmartHouse.Droid.Resource.Id.tag_screen_reader_focusable;
+			global::Plugin.Media.Resource.Id.tag_state_description = global::SmartHouse.Droid.Resource.Id.tag_state_description;
+			global::Plugin.Media.Resource.Id.tag_transition_group = global::SmartHouse.Droid.Resource.Id.tag_transition_group;
+			global::Plugin.Media.Resource.Id.tag_unhandled_key_event_manager = global::SmartHouse.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::Plugin.Media.Resource.Id.tag_unhandled_key_listeners = global::SmartHouse.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::Plugin.Media.Resource.Id.tag_window_insets_animation_callback = global::SmartHouse.Droid.Resource.Id.tag_window_insets_animation_callback;
+			global::Plugin.Media.Resource.Id.text = global::SmartHouse.Droid.Resource.Id.text;
+			global::Plugin.Media.Resource.Id.text2 = global::SmartHouse.Droid.Resource.Id.text2;
+			global::Plugin.Media.Resource.Id.time = global::SmartHouse.Droid.Resource.Id.time;
+			global::Plugin.Media.Resource.Id.title = global::SmartHouse.Droid.Resource.Id.title;
+			global::Plugin.Media.Resource.Id.view_tree_lifecycle_owner = global::SmartHouse.Droid.Resource.Id.view_tree_lifecycle_owner;
+			global::Plugin.Media.Resource.Integer.status_bar_notification_info_maxnum = global::SmartHouse.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Plugin.Media.Resource.Layout.browser_actions_context_menu_page = global::SmartHouse.Droid.Resource.Layout.browser_actions_context_menu_page;
+			global::Plugin.Media.Resource.Layout.browser_actions_context_menu_row = global::SmartHouse.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::Plugin.Media.Resource.Layout.custom_dialog = global::SmartHouse.Droid.Resource.Layout.custom_dialog;
+			global::Plugin.Media.Resource.Layout.notification_action = global::SmartHouse.Droid.Resource.Layout.notification_action;
+			global::Plugin.Media.Resource.Layout.notification_action_tombstone = global::SmartHouse.Droid.Resource.Layout.notification_action_tombstone;
+			global::Plugin.Media.Resource.Layout.notification_template_custom_big = global::SmartHouse.Droid.Resource.Layout.notification_template_custom_big;
+			global::Plugin.Media.Resource.Layout.notification_template_icon_group = global::SmartHouse.Droid.Resource.Layout.notification_template_icon_group;
+			global::Plugin.Media.Resource.Layout.notification_template_part_chronometer = global::SmartHouse.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Plugin.Media.Resource.Layout.notification_template_part_time = global::SmartHouse.Droid.Resource.Layout.notification_template_part_time;
+			global::Plugin.Media.Resource.String.copy_toast_msg = global::SmartHouse.Droid.Resource.String.copy_toast_msg;
+			global::Plugin.Media.Resource.String.fallback_menu_item_copy_link = global::SmartHouse.Droid.Resource.String.fallback_menu_item_copy_link;
+			global::Plugin.Media.Resource.String.fallback_menu_item_open_in_browser = global::SmartHouse.Droid.Resource.String.fallback_menu_item_open_in_browser;
+			global::Plugin.Media.Resource.String.fallback_menu_item_share_link = global::SmartHouse.Droid.Resource.String.fallback_menu_item_share_link;
+			global::Plugin.Media.Resource.String.status_bar_notification_info_overflow = global::SmartHouse.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Plugin.Media.Resource.Style.TextAppearance_Compat_Notification = global::SmartHouse.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Plugin.Media.Resource.Style.TextAppearance_Compat_Notification_Info = global::SmartHouse.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Plugin.Media.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::SmartHouse.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Plugin.Media.Resource.Style.TextAppearance_Compat_Notification_Time = global::SmartHouse.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Plugin.Media.Resource.Style.TextAppearance_Compat_Notification_Title = global::SmartHouse.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Plugin.Media.Resource.Style.Widget_Compat_NotificationActionContainer = global::SmartHouse.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Plugin.Media.Resource.Style.Widget_Compat_NotificationActionText = global::SmartHouse.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Plugin.Media.Resource.Styleable.Capability = global::SmartHouse.Droid.Resource.Styleable.Capability;
+			global::Plugin.Media.Resource.Styleable.Capability_queryPatterns = global::SmartHouse.Droid.Resource.Styleable.Capability_queryPatterns;
+			global::Plugin.Media.Resource.Styleable.Capability_shortcutMatchRequired = global::SmartHouse.Droid.Resource.Styleable.Capability_shortcutMatchRequired;
+			global::Plugin.Media.Resource.Styleable.ColorStateListItem = global::SmartHouse.Droid.Resource.Styleable.ColorStateListItem;
+			global::Plugin.Media.Resource.Styleable.ColorStateListItem_alpha = global::SmartHouse.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Plugin.Media.Resource.Styleable.ColorStateListItem_android_alpha = global::SmartHouse.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Plugin.Media.Resource.Styleable.ColorStateListItem_android_color = global::SmartHouse.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Plugin.Media.Resource.Styleable.FontFamily = global::SmartHouse.Droid.Resource.Styleable.FontFamily;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont = global::SmartHouse.Droid.Resource.Styleable.FontFamilyFont;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_android_font = global::SmartHouse.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_android_fontStyle = global::SmartHouse.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::SmartHouse.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_android_fontWeight = global::SmartHouse.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::SmartHouse.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_font = global::SmartHouse.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_fontStyle = global::SmartHouse.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::SmartHouse.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_fontWeight = global::SmartHouse.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_ttcIndex = global::SmartHouse.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Plugin.Media.Resource.Styleable.FontFamily_fontProviderAuthority = global::SmartHouse.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Plugin.Media.Resource.Styleable.FontFamily_fontProviderCerts = global::SmartHouse.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Plugin.Media.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::SmartHouse.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Plugin.Media.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::SmartHouse.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Plugin.Media.Resource.Styleable.FontFamily_fontProviderPackage = global::SmartHouse.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Plugin.Media.Resource.Styleable.FontFamily_fontProviderQuery = global::SmartHouse.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Plugin.Media.Resource.Styleable.FontFamily_fontProviderSystemFontFamily = global::SmartHouse.Droid.Resource.Styleable.FontFamily_fontProviderSystemFontFamily;
+			global::Plugin.Media.Resource.Styleable.GradientColor = global::SmartHouse.Droid.Resource.Styleable.GradientColor;
+			global::Plugin.Media.Resource.Styleable.GradientColorItem = global::SmartHouse.Droid.Resource.Styleable.GradientColorItem;
+			global::Plugin.Media.Resource.Styleable.GradientColorItem_android_color = global::SmartHouse.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::Plugin.Media.Resource.Styleable.GradientColorItem_android_offset = global::SmartHouse.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_centerColor = global::SmartHouse.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_centerX = global::SmartHouse.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_centerY = global::SmartHouse.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_endColor = global::SmartHouse.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_endX = global::SmartHouse.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_endY = global::SmartHouse.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_gradientRadius = global::SmartHouse.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_startColor = global::SmartHouse.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_startX = global::SmartHouse.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_startY = global::SmartHouse.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_tileMode = global::SmartHouse.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_type = global::SmartHouse.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Plugin.Media.Resource.Xml.image_share_filepaths = global::SmartHouse.Droid.Resource.Xml.image_share_filepaths;
+			global::Plugin.Media.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::SmartHouse.Droid.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::SmartHouse.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::SmartHouse.Droid.Resource.Attribute.font;
 			global::Xamarin.Essentials.Resource.Attribute.fontProviderAuthority = global::SmartHouse.Droid.Resource.Attribute.fontProviderAuthority;
@@ -16532,208 +16736,226 @@ namespace SmartHouse.Droid
 			public const int cart = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int delete = 2131165284;
+			public const int childrenWork = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int design_fab_background = 2131165285;
+			public const int delete = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int design_ic_visibility = 2131165286;
+			public const int design_fab_background = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int design_ic_visibility_off = 2131165287;
+			public const int design_ic_visibility = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int design_password_eye = 2131165288;
+			public const int design_ic_visibility_off = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int design_snackbar_background = 2131165289;
+			public const int design_password_eye = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int electricitySymbol = 2131165290;
+			public const int design_snackbar_background = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int family = 2131165291;
+			public const int electricitySymbol = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int fastcart = 2131165292;
+			public const int family = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int fun = 2131165293;
+			public const int fastcart = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int gasInvoice = 2131165294;
+			public const int fun = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int gasSymbol = 2131165295;
+			public const int gasInvoice = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int hashmal = 2131165296;
+			public const int gasSymbol = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int heshbonot = 2131165297;
+			public const int hashmal = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int house = 2131165298;
-			
-			// aapt resource value: 0x7F07007A
-			public const int icon = 2131165306;
+			public const int heshbonot = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int ic_arrow_down_24dp = 2131165299;
-			
-			// aapt resource value: 0x7F070074
-			public const int ic_clock_black_24dp = 2131165300;
-			
-			// aapt resource value: 0x7F070075
-			public const int ic_keyboard_black_24dp = 2131165301;
-			
-			// aapt resource value: 0x7F070076
-			public const int ic_mtrl_checked_circle = 2131165302;
-			
-			// aapt resource value: 0x7F070077
-			public const int ic_mtrl_chip_checked_black = 2131165303;
-			
-			// aapt resource value: 0x7F070078
-			public const int ic_mtrl_chip_checked_circle = 2131165304;
-			
-			// aapt resource value: 0x7F070079
-			public const int ic_mtrl_chip_close_circle = 2131165305;
+			public const int house = 2131165299;
 			
 			// aapt resource value: 0x7F07007B
-			public const int material_cursor_drawable = 2131165307;
+			public const int icon = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int material_ic_calendar_black_24dp = 2131165308;
+			public const int icon_ac = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int material_ic_clear_black_24dp = 2131165309;
+			public const int icon_light = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int material_ic_edit_black_24dp = 2131165310;
+			public const int icon_pipe = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165311;
+			public const int icon_smoke = 2131165311;
+			
+			// aapt resource value: 0x7F070074
+			public const int ic_arrow_down_24dp = 2131165300;
+			
+			// aapt resource value: 0x7F070075
+			public const int ic_clock_black_24dp = 2131165301;
+			
+			// aapt resource value: 0x7F070076
+			public const int ic_keyboard_black_24dp = 2131165302;
+			
+			// aapt resource value: 0x7F070077
+			public const int ic_mtrl_checked_circle = 2131165303;
+			
+			// aapt resource value: 0x7F070078
+			public const int ic_mtrl_chip_checked_black = 2131165304;
+			
+			// aapt resource value: 0x7F070079
+			public const int ic_mtrl_chip_checked_circle = 2131165305;
+			
+			// aapt resource value: 0x7F07007A
+			public const int ic_mtrl_chip_close_circle = 2131165306;
 			
 			// aapt resource value: 0x7F070080
-			public const int material_ic_keyboard_arrow_next_black_24dp = 2131165312;
+			public const int material_cursor_drawable = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int material_ic_keyboard_arrow_previous_black_24dp = 2131165313;
+			public const int material_ic_calendar_black_24dp = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165314;
+			public const int material_ic_clear_black_24dp = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int material_ic_menu_arrow_down_black_24dp = 2131165315;
+			public const int material_ic_edit_black_24dp = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int material_ic_menu_arrow_up_black_24dp = 2131165316;
+			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int mtrl_dialog_background = 2131165317;
+			public const int material_ic_keyboard_arrow_next_black_24dp = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int mtrl_dropdown_arrow = 2131165318;
+			public const int material_ic_keyboard_arrow_previous_black_24dp = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int mtrl_ic_arrow_drop_down = 2131165319;
+			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int mtrl_ic_arrow_drop_up = 2131165320;
+			public const int material_ic_menu_arrow_down_black_24dp = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int mtrl_ic_cancel = 2131165321;
+			public const int material_ic_menu_arrow_up_black_24dp = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int mtrl_ic_error = 2131165322;
+			public const int mtrl_dialog_background = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int mtrl_navigation_bar_item_background = 2131165323;
+			public const int mtrl_dropdown_arrow = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int mtrl_popupmenu_background = 2131165324;
+			public const int mtrl_ic_arrow_drop_down = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int mtrl_popupmenu_background_dark = 2131165325;
+			public const int mtrl_ic_arrow_drop_up = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int mtrl_tabs_default_indicator = 2131165326;
+			public const int mtrl_ic_cancel = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int navigation_empty_icon = 2131165327;
+			public const int mtrl_ic_error = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int notification_action_background = 2131165328;
+			public const int mtrl_navigation_bar_item_background = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int notification_bg = 2131165329;
+			public const int mtrl_popupmenu_background = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int notification_bg_low = 2131165330;
+			public const int mtrl_popupmenu_background_dark = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int notification_bg_low_normal = 2131165331;
+			public const int mtrl_tabs_default_indicator = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int notification_bg_low_pressed = 2131165332;
+			public const int navigation_empty_icon = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int notification_bg_normal = 2131165333;
+			public const int notification_action_background = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int notification_bg_normal_pressed = 2131165334;
+			public const int notification_bg = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int notification_icon_background = 2131165335;
+			public const int notification_bg_low = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int notification_template_icon_bg = 2131165336;
+			public const int notification_bg_low_normal = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int notification_template_icon_low_bg = 2131165337;
+			public const int notification_bg_low_pressed = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int notification_tile_bg = 2131165338;
+			public const int notification_bg_normal = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int notify_panel_notification_icon_bg = 2131165339;
+			public const int notification_bg_normal_pressed = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int pet = 2131165340;
+			public const int notification_icon_background = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int preference_list_divider_material = 2131165341;
+			public const int notification_template_icon_bg = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int professional = 2131165342;
+			public const int notification_template_icon_low_bg = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int RegularMaintenance = 2131165343;
+			public const int notification_tile_bg = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int shopping = 2131165344;
+			public const int notify_panel_notification_icon_bg = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int task = 2131165345;
+			public const int pet = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int test_custom_background = 2131165346;
+			public const int preference_list_divider_material = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int tooltip_frame_dark = 2131165347;
+			public const int professional = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int tooltip_frame_light = 2131165348;
+			public const int RegularMaintenance = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int waterInvoice = 2131165349;
+			public const int shopping = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int waterSymbol = 2131165350;
+			public const int task = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int write = 2131165351;
+			public const int test_custom_background = 2131165351;
+			
+			// aapt resource value: 0x7F0700A8
+			public const int tooltip_frame_dark = 2131165352;
+			
+			// aapt resource value: 0x7F0700A9
+			public const int tooltip_frame_light = 2131165353;
+			
+			// aapt resource value: 0x7F0700AA
+			public const int vacation = 2131165354;
+			
+			// aapt resource value: 0x7F0700AB
+			public const int waterInvoice = 2131165355;
+			
+			// aapt resource value: 0x7F0700AC
+			public const int waterSymbol = 2131165356;
+			
+			// aapt resource value: 0x7F0700AD
+			public const int write = 2131165357;
 			
 			static Drawable()
 			{

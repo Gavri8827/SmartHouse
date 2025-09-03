@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.IO;
+using SmartHouse.user;
 
 namespace SmartHouse
 {
@@ -10,25 +11,15 @@ namespace SmartHouse
          
     {
 
-         private static SQLhelper db;
-
-        public static SQLhelper MyDatabase
-        {
-            get
-            {
-                if (db == null)
-                {
-                    db = new SQLhelper(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "MyStore.db3"));
-                }
-                return db;
-            }
-        }
 
         public App()
         {
             InitializeComponent();
-           
-            //MainPage = new NavigationPage(new MainPage());
+
+            MainPage = new AppShell();
+
+            // בטעינה ראשונית, ננווט ל-login
+            Shell.Current.GoToAsync("//login");
 
         }
 

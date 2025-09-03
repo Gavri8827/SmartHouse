@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SmartHouse.Firebase;
+using SmartHouse.UtilitiesClass.Account;
+using AccountModel = SmartHouse.UtilitiesClass.Account.Account;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -10,39 +13,94 @@ using Xamarin.Forms.Xaml;
 namespace SmartHouse.UtilitiesClass
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class water : ContentPage
+    public partial class Water : ContentPage
     {
+
+        private FirebaseHelper firebaseHelper = new FirebaseHelper();
+        private AccountModel currentAccount;
+
         const string WaterDateKey = "WaterDate";
         const string WaterPaymentKey = "WaterPayment";
-        public water()
+        public Water()
         {
             InitializeComponent();
-            LoadData();
+            
         }
 
-        void LoadData()
+        protected override async void OnAppearing()
         {
-            // טעינת פרטי החשבון מה־Application.Properties
-            WaterAcountNumber.Text = Application.Current.Properties.ContainsKey("WaterAccount")
-                ? Application.Current.Properties["WaterAccount"] as string
-                : "אין נתונים";
+            base.OnAppearing();
+            await LoadWaterData();
+        }
 
-            WaterPropertytNumber.Text = Application.Current.Properties.ContainsKey("WaterProperty")
-                ? Application.Current.Properties["WaterProperty"] as string
-                : "אין נתונים";
+
+        private async Task LoadWaterData()
+        {
+            var list = await firebaseHelper.GetUtilitiesList(); // מחזיר את כל רשומות התשתיות לקבוצה
+            currentAccount = list.FirstOrDefault();
+
+            if (currentAccount != null)
+            {
+                WaterAcountNumber.Text = currentAccount.Water ?? "לא נמצא";
+                WaterPropertytNumber.Text = currentAccount.WaterNumber ?? "לא נמצא";
+
+                WaterPaymentEntry.Text = currentAccount.WaterPayment > 0
+                    ? currentAccount.WaterPayment.ToString("F2")
+                    : "";
+
+                if (!string.IsNullOrEmpty(currentAccount.WaterDate))
+                {
+                    if (DateTime.TryParse(currentAccount.WaterDate, out DateTime parsedDate))
+                    {
+                        WaterDatePicker.Date = parsedDate;
+                    }
+                }
+            }
+            else
+            {
+                await DisplayAlert("שגיאה", "לא נמצאו נתוני מים", "אישור");
+            }
         }
 
         async void water_clicked(object sender, EventArgs e)
         {
-            // קריאה מה-DatePicker ומה-Entry
-            var date = WaterDatePicker.Date.ToString("yyyy-MM-dd");
-            var amount = WaterPaymentEntry.Text?.Trim();
+            if (currentAccount == null)
+            {
+                await DisplayAlert("שגיאה", "אין נתוני מים קיימים", "אישור");
+                return;
+            }
 
-            // שמירה ב-Preferences
-            Preferences.Set(WaterDateKey, date);
-            Preferences.Set(WaterPaymentKey, amount);
+            if (!decimal.TryParse(WaterPaymentEntry.Text, out decimal payment))
+            {
+                await DisplayAlert("שגיאה", "אנא הזן סכום תקין", "אישור");
+                return;
+            }
 
-            await DisplayAlert("הצלחה", "הנתונים נשמרו בהצלחה!", "אישור");
+            currentAccount.ElectricityPayment = payment;
+            currentAccount.WaterDate = WaterDatePicker.Date.ToString("yyyy-MM-dd");
+
+            try
+            {
+                await firebaseHelper.UpdateUtilities(currentAccount.FirebaseKey, currentAccount);
+                await DisplayAlert("הצלחה", "הנתונים נשמרו בהצלחה!", "אישור");
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("שגיאה", "שגיאה בשמירה: " + ex.Message, "אישור");
+            }
+
+            var paymentItem = new HistoryPayment
+            {
+                UtilityType = "Water",
+                Amount = payment,
+                Date = WaterDatePicker.Date.ToString("yyyy-MM-dd")
+            };
+
+            await firebaseHelper.AddPaymentToHistory(paymentItem);
+
+
+
+
         }
 
     }

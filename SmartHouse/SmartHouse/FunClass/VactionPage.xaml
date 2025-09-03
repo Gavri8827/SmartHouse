@@ -1,12 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SmartHouse.FunClass.VactionPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="SmartHouse.FunClass.VactionPage" Title="Plan Vacation">
+    <StackLayout Padding="20" Spacing="15">
+
+        <!-- יעד -->
+        <Label Text="יעד:" FontAttributes="Bold"/>
+        <Entry x:Name="destinationEntry" Placeholder="הקלד יעד" />
+
+        <!-- תאריכים -->
+        <Label Text="מ:" FontAttributes="Bold"/>
+        <DatePicker x:Name="startDatePicker" />
+
+        <Label Text="עד:" FontAttributes="Bold"/>
+        <DatePicker x:Name="endDatePicker" />
+
+        <Button Text="שמור" Clicked="Button_Clicked_1" />
+
+       
+
+    </StackLayout>
 </ContentPage>

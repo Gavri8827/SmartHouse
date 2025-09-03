@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.ShopClass.InsertShopItem">
+    <StackLayout>
+        <Label Text="איזה פריט תרצה להוסיף לרשימה:" FontSize="Medium" TextColor="Green"/>
+        <Entry x:Name="ItemShopList" Keyboard="Text" Placeholder="ItemShop"
+       ReturnType="Next"/>
+        <Label Text="איזו כמות תרצה?"/>
+        <Entry x:Name="QuantityItem" Keyboard="Text" Placeholder="QuantityItemList"
+       ReturnType="Next"/>
+        <Picker x:Name="KindItem" Title="בחר קטגוריה">
+            <Picker.Items>
+                <x:String>ירקות</x:String>
+                <x:String>מוצרי חלב</x:String>
+                <x:String>בשר</x:String>
+                <x:String>טואלטיקה</x:String>
+                <x:String>שימורים</x:String>
+                <x:String>קטניות</x:String>
+                <x:String>לחם</x:String>
+                <x:String>אחר</x:String>
+            </Picker.Items>
+        </Picker>
+        <Button Text="save" Clicked="Button_Clicked"/>
+
+
+    </StackLayout>
+</ContentPage>

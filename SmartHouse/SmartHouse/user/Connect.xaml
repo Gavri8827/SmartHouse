@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.user.Connect"
+             BackgroundColor="#F5F5F5"
+             Title="ברוך הבא">
+
+    <ContentPage.Content>
+        <StackLayout Padding="30" Spacing="25" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+
+            <Label Text="ברוך הבא לאפליקציית הבית החכם"
+                   FontSize="24"
+                   HorizontalTextAlignment="Center"
+                   TextColor="#333"
+                   FontAttributes="Bold" />
+
+            <Image Source="icon" HeightRequest="150" HorizontalOptions="Center" />
+
+            <Button Text="התחבר"
+                    Clicked="Connect_"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    CornerRadius="15"
+                    FontSize="18"
+                    HeightRequest="50" />
+
+            <Button Text="הירשם"
+                    Clicked="LogIn"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    CornerRadius="15"
+                    FontSize="18"
+                    HeightRequest="50" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

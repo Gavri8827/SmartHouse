@@ -9,18 +9,18 @@ using Xamarin.Forms.Xaml;
 
 namespace SmartHouse.FunClass
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class FunMainPage : ContentPage
-	{
-		public FunMainPage ()
-		{
-			InitializeComponent ();
-		}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class FunMainPage : ContentPage
+    {
+        public FunMainPage()
+        {
+            InitializeComponent();
+        }
 
 
         private async void vacations_Clicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync(nameof(VactionPage));
+            await Shell.Current.GoToAsync(nameof(VactionListPage));
         }
 
         private async void familyTime_Clicked(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace SmartHouse.FunClass
 
         private async void Copons_Clicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync(nameof(coponPage));
+            await Shell.Current.GoToAsync(nameof(CoponPage));
         }
     }
 }

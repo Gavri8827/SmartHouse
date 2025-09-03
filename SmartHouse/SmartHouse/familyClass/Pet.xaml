@@ -1,41 +1,84 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SmartHouse.familyClass.Pet">
-    <ListView x:Name="PetList" SeparatorColor="Gray" ItemSelected="PetList_ItemSelected">
+             x:Class="SmartHouse.FamilyClass.Pet"
+             BackgroundColor="#f5f5f5">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="הוסף" 
+                     IconImageSource="add.png"
+                     Priority="0"
+                     Order="Primary"
+                     Clicked="ToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="PetList"
+              SeparatorVisibility="None"
+              HasUnevenRows="True"
+              BackgroundColor="Transparent"
+              ItemSelected="PetList_ItemSelected">
         <ListView.ItemTemplate>
-
             <DataTemplate>
-                <ViewCell >
-                    <StackLayout Orientation="Horizontal" Padding="10" Spacing="10" VerticalOptions="Fill" >
-                        <Image Source="{Binding Image}"
-                          HeightRequest="50"
-                          WidthRequest="50" />
-                        <StackLayout Orientation="Horizontal" Spacing="10">
-                            <Label Text="{Binding Name}"
-                              FontSize="Medium"
-                              TextColor="Blue"
-                              FontAttributes="Bold"/>
-                            <Label Text="{Binding Kind}"
-                                   FontSize="Small"
-                                   TextColor="Blue" FontAttributes="Bold"/>
-                        </StackLayout>
+                <ViewCell>
+                    <Frame Margin="10"
+                           Padding="10"
+                           CornerRadius="15"
+                           BackgroundColor="White"
+                           HasShadow="True">
+                        <Grid ColumnSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
 
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" VerticalOptions="Center" >
-                            <ImageButton Source="add.png" BackgroundColor ="Green" HeightRequest="50" WidthRequest="50" Clicked="ImageButton_Clicked"  />
-                            <ImageButton Source="delete.png" BackgroundColor ="Green" HeightRequest="50" WidthRequest="50" Clicked="ImageButton_Clicked_1" />
+                            <!-- תמונת חיית המחמד -->
+                            <Image Grid.Column="0"
+                                   Source="{Binding Image}"
+                                   HeightRequest="60"
+                                   WidthRequest="60"
+                                   Aspect="AspectFill"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Start"
+                                   Margin="0,0,5,0">
+                                <Image.Clip>
+                                    <EllipseGeometry
+                                        Center="30,30"
+                                        RadiusX="30"
+                                        RadiusY="30" />
+                                </Image.Clip>
+                            </Image>
 
+                            <!-- שם וסוג -->
+                            <StackLayout Grid.Column="1"
+                                         VerticalOptions="Center"
+                                         Spacing="2">
+                                <Label Text="{Binding Name}"
+                                       FontSize="Medium"
+                                       TextColor="#2a2a2a"
+                                       FontAttributes="Bold" />
+                                <Label Text="{Binding Kind}"
+                                       FontSize="Small"
+                                       TextColor="#666" />
+                            </StackLayout>
 
-                        </StackLayout>
-
-
-                    </StackLayout>
-                    
-                    
+                            <!-- כפתור מחיקה -->
+                            <Frame Grid.Column="2"
+                                   Padding="5"
+                                   BackgroundColor="#ff5252"
+                                   CornerRadius="25"
+                                   VerticalOptions="Center"
+                                   HasShadow="False">
+                                <ImageButton Source="delete.png"
+                                             BackgroundColor="Transparent"
+                                             HeightRequest="30"
+                                             WidthRequest="30"
+                                             Clicked="ImageButton_Clicked_1" />
+                            </Frame>
+                        </Grid>
+                    </Frame>
                 </ViewCell>
-                
             </DataTemplate>
         </ListView.ItemTemplate>
-        
     </ListView>
 </ContentPage>

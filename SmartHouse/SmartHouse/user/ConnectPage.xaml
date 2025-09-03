@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.user.ConnectPage"
+             Title="User Login">
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="15" VerticalOptions="Center">
+
+            <Label Text="התחברות" FontSize="Large" HorizontalOptions="Center" />
+
+            <Entry x:Name="NameEntry" Placeholder="שם משתמש" />
+
+            <Entry x:Name="GroupIdEntry" Placeholder="מזהה קבוצה" />
+
+            <Entry x:Name="GroupPasswordEntry" Placeholder="קוד קבוצה" IsPassword="True" />
+
+            <Button Text="התחבר" Clicked="Button_Clicked" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

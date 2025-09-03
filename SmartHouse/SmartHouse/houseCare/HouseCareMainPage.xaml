@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SmartHouse.houseCare.HouseCareMainPage"
+             x:Class="SmartHouse.HouseCare.HouseCareMainPage"
              Title="תחזוקת הבית">
 
     <StackLayout Padding="15">
@@ -23,7 +23,7 @@
 
         <Button Text="איתור טכנאי" BackgroundColor="#FF6A00" Clicked="Pro_Clicked"/>
         <Button Text="תחזוקה שוטפת" BackgroundColor="#FF6A00" Clicked="Maintance_clicked"/>
-        <Button Text="דוחות" BackgroundColor="#FF6A00" Clicked="Summary_Clicked"/>
+        
 
     </StackLayout>
     

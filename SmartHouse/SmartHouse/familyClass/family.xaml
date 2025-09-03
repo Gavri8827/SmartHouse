@@ -1,21 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SmartHouse.familyClass.family"
+             x:Class="SmartHouse.Family"
              BackgroundColor="White">
 
     <ContentPage BackgroundColor="White">
-        <StackLayout VerticalOptions="Center" >
-            <Label Text="clicked on the picture to start!" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" />
-            
+        <StackLayout VerticalOptions="Center" Padding="25" Spacing="20" >
+            <Label Text="ניהול ילדים" 
+               FontSize="24" HorizontalOptions="Center" HorizontalTextAlignment="Center" 
+VerticalTextAlignment="Center" TextColor="Purple" FontAttributes="Bold" />
+            <Label Text="לחץ על התמונה כדי להתחיל " 
+       FontSize="20" HorizontalOptions="Center" 
+HorizontalTextAlignment="Center" 
+VerticalTextAlignment="Center"
+           TextColor="Black"/>
+            <Label Text="גלול ימינה לעמודים נוספים" 
+       FontSize="20" HorizontalOptions="Center" 
+HorizontalTextAlignment="Center" 
+VerticalTextAlignment="Center"
+           TextColor="Black"/>
+
+
             <ImageButton  x:Name="image1" Clicked="Image1_Clicked" />
-            
+
         </StackLayout>
     </ContentPage>
-    
+
     <ContentPage BackgroundColor="White">
-        <StackLayout VerticalOptions="Center">
-            <Label Text="Pet management" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large"/>
+        <StackLayout VerticalOptions="Center" Padding="25" Spacing="20" >
+            <Label Text="ניהול בעלי חיים" 
+               FontSize="24" HorizontalOptions="Center" HorizontalTextAlignment="Center" 
+VerticalTextAlignment="Center" TextColor="Purple" FontAttributes="Bold" />
+            <Label Text="לחץ על התמונה כדי להתחיל " 
+       FontSize="20" HorizontalOptions="Center" 
+HorizontalTextAlignment="Center" 
+VerticalTextAlignment="Center"
+           TextColor="Black"/>
+            <Label Text="גלול ימינה לעמודים נוספים" 
+       FontSize="20" HorizontalOptions="Center" 
+HorizontalTextAlignment="Center" 
+VerticalTextAlignment="Center"
+           TextColor="Black"/>
             <ImageButton x:Name="image2" Clicked="ImageButton_Clicked"/>
         </StackLayout>
     </ContentPage>

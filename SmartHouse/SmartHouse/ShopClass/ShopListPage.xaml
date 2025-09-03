@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHouse.ShopClass.ShopListPage"
+             Title="Shop List">
+    <ListView x:Name="ShopList" SeparatorColor="Gray" HasUnevenRows="True" IsGroupingEnabled="True"
+          GroupDisplayBinding="{Binding Kind}">
+        <ListView.GroupHeaderTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Label Text="{Binding Kind}" FontAttributes="Bold" BackgroundColor="LightGray" Padding="5"/>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.GroupHeaderTemplate>
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Delete"
+                                       BackgroundColor="Red"
+                                       IconImageSource="delete.png"
+                                       Invoked="SwipeItem_Invoked"/>
+                                <SwipeItem Text="Edit"
+                                       BackgroundColor="Green"
+                                       IconImageSource="add.png"
+                                       Invoked="SwipeItem_Invoked_1"/>
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+
+                        <Frame BorderColor="LightGray"
+                           CornerRadius="10"
+                           Padding="10"
+                           Margin="5">
+                            <StackLayout Spacing="5"
+                                     HorizontalOptions="FillAndExpand"
+                                     VerticalOptions="Center">
+                                <Label Text="{Binding Description, StringFormat='מוצר: {0}'}"
+                                   FontSize="Small"
+                                   TextColor="Green"
+                                   LineBreakMode="WordWrap" />
+                                <Label Text="{Binding Quantity, StringFormat='כמות: {0}'}"
+                                   FontSize="Small"
+                                   TextColor="Black" />
+                                <CheckBox IsChecked="{Binding IsDone}"
+                                      HorizontalOptions="End"
+                                      CheckedChanged="CheckBox_CheckedChanged"/>
+                            </StackLayout>
+                        </Frame>
+                    </SwipeView>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="insert"
+       Clicked="ToolbarItem_Clicked"
+      IconImageSource="add.png"
+      Priority="2"
+       Order="Primary"/>
+
+
+
+
+    </ContentPage.ToolbarItems>
+</ContentPage>

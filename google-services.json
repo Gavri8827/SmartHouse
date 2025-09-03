@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "115516560600",
+    "project_id": "smarthouse-e4231",
+    "storage_bucket": "smarthouse-e4231.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:115516560600:android:8e34183cf4438664d8b3ad",
+        "android_client_info": {
+          "package_name": "com.companyname.smarthouse"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-MwlXF9VpGLYhRaoRoM69nIQkKVg2DAQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

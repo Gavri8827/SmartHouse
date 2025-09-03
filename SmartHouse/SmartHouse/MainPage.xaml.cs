@@ -4,10 +4,10 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SmartHouse.familyClass;
+using SmartHouse.FamilyClass;
 using SmartHouse.FunClass;
-using SmartHouse.houseCare;
-using SmartHouse.shopcClass;
+using SmartHouse.HouseCare;
+using SmartHouse.ShopClass;
 using SmartHouse.UtilitiesClass;
 using Xamarin.Forms;
 
