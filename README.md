@@ -51,7 +51,7 @@ _[Add your screenshots here]_
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/smarthouse.git
+   git clone https://github.com/Gavri8827/SmartHouse.git
    ```
 
 2. **Open the project in Visual Studio Code**
@@ -68,10 +68,6 @@ _[Add your screenshots here]_
    - Start Android Emulator (AMD)
    - Open the solution file (`.sln`) in Visual Studio Code
    - Run the project from VS Code
-
-## 👨‍💻 Author
-
-[Your Name/GitHub Profile]
 
 ## 🤝 Contributing
 
