@@ -9,7 +9,7 @@ In the modern era, managing a household has become a complex task: electricity, 
 SmartHouse is a **cross-platform mobile app** built with **Xamarin.Forms (C#)** for Android. The app centralizes all household management tasks in one place with a modern and intuitive UI.
 
 <div align="center">
-  <img src="screenshots/welcome.png" alt="Welcome Screen" width="250">
+  <img src="screenshots/welcome.png" alt="Welcome Screen" width="233">
   <img src="screenshots/signUp.png" alt="Sign Up Screen" width="250">
   <img src="screenshots/mainScreen.png" alt="Main Screen" width="250">
 </div>
