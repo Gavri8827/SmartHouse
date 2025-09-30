@@ -74,7 +74,8 @@ SmartHouse is a **cross-platform mobile app** built with **Xamarin.Forms (C#)** 
    - Open the solution file (`.sln`) in Visual Studio Code
    - Run the project from VS Code
   
-📁 Project Structure
+## 📁 Project Structure
+```text
 SmartHouse/
 ├── FuncClass/              # Core functionality and business logic
 ├── ShopClass/              # Shopping list management
@@ -83,6 +84,7 @@ SmartHouse/
 ├── houseCare/              # House maintenance and care tasks
 ├── images/                 # App images and assets
 └── user/                   # User authentication and profiles
+```
 
 ## 🤝 Contributing
 
