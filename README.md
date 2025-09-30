@@ -8,6 +8,8 @@ In the modern era, managing a household has become a complex task: electricity, 
 
 SmartHouse is a **cross-platform mobile app** built with **Xamarin.Forms (C#)** for Android. The app centralizes all household management tasks in one place with a modern and intuitive UI.
 
+<img src="screenshots/welcome.png" alt="Welcome Screen" width="233">
+
 ## ✨ Features
 
 - 📊 **Utilities Tracking** – Monitor bills and usage (water, electricity, gas)
@@ -37,9 +39,9 @@ SmartHouse is a **cross-platform mobile app** built with **Xamarin.Forms (C#)** 
 ## 📱 Screenshots
 
 <div align="center">
-  <img src="screenshots/welcome.png" alt="Welcome Screen" width="233">
   <img src="screenshots/signUp.png" alt="Sign Up Screen" width="250">
   <img src="screenshots/mainScreen.png" alt="Main Screen" width="250">
+   <img src="screenshots/accounts.png" alt="Main Screen" width="250">
 </div>
 
 
@@ -71,6 +73,16 @@ SmartHouse is a **cross-platform mobile app** built with **Xamarin.Forms (C#)** 
    - Start Android Emulator (AMD)
    - Open the solution file (`.sln`) in Visual Studio Code
    - Run the project from VS Code
+  
+📁 Project Structure
+SmartHouse/
+├── FuncClass/              # Core functionality and business logic
+├── ShopClass/              # Shopping list management
+├── UtilitiesClass/         # Utilities tracking (bills, usage)
+├── familyClass/            # Family member management
+├── houseCare/              # House maintenance and care tasks
+├── images/                 # App images and assets
+└── user/                   # User authentication and profiles
 
 ## 🤝 Contributing
 
